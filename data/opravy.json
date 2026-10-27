@@ -1,9 +1,765 @@
 {
  "verze": 1,
- "popis": "Opravy z karty Kontrola dat (BK Ludgeřovice). Klíče: jméno|ročník bez diakritiky, oddíl bez diakritiky.",
- "upraveno": "2026-10-27T06:47:28.820Z",
- "bezci": {},
- "oddily": {},
- "ruzni": [],
+ "popis": "Opravy z nástroje Kontrola dat (BK Ludgeřovice). Klíče: jméno|ročník bez diakritiky, oddíl bez diakritiky.",
+ "upraveno": "2026-10-27T07:06:11.695Z",
+ "bezci": {
+  "adamusova marie|1981": {
+   "jmeno": "Adamusova Marie",
+   "rocnik": 1982
+  },
+  "artimova pavla|1974": {
+   "jmeno": "Artimová Pavlína",
+   "rocnik": 1974
+  },
+  "balcar marek|1977": {
+   "jmeno": "Balcar Marek",
+   "rocnik": 1979
+  },
+  "bardasevsky lubomir|1961": {
+   "jmeno": "Bardaševský Lubomír",
+   "rocnik": 1962
+  },
+  "basik irena|1957": {
+   "jmeno": "Basiak Irena",
+   "rocnik": 1957
+  },
+  "benes richard|2008": {
+   "jmeno": "Beneš Richard",
+   "rocnik": 2007
+  },
+  "bezas petr|1976": {
+   "jmeno": "Belas Petr",
+   "rocnik": 1976
+  },
+  "bibrlik martin|": {
+   "jmeno": "Bíbrlík Martin",
+   "rocnik": 2013
+  },
+  "boucek krystof|2011": {
+   "jmeno": "Bunček Kryštof",
+   "rocnik": 2011
+  },
+  "brziakova elen|": {
+   "jmeno": "Brziaková Elen",
+   "rocnik": 2016
+  },
+  "casarova debora|2012": {
+   "jmeno": "Časarová Debora",
+   "rocnik": 2014
+  },
+  "casovova debora|2012": {
+   "jmeno": "Časarová Debora",
+   "rocnik": 2012
+  },
+  "cerna iva|1974": {
+   "jmeno": "Černá Iva",
+   "rocnik": 1976
+  },
+  "coolen malcolm|1960": {
+   "jmeno": "Collen Malcolm",
+   "rocnik": 1960
+  },
+  "cukrowski eugeniusz|1957": {
+   "jmeno": "Cukrowski Eugeniusz",
+   "rocnik": 1955
+  },
+  "dedek beskydsky|1945": {
+   "jmeno": "Beskydský Dědek",
+   "rocnik": 1945
+  },
+  "dimicoli roberto|1986": {
+   "jmeno": "Dimiccoli Roberto",
+   "rocnik": 1986
+  },
+  "drobec michal|": {
+   "jmeno": "Drobec Michal",
+   "rocnik": 2013
+  },
+  "drobec michal|2013": {
+   "jmeno": "Drobec Michal",
+   "rocnik": 2011
+  },
+  "durajkova vanesska|2008": {
+   "jmeno": "Ďurajková Vanessa",
+   "rocnik": 2008
+  },
+  "foltynkova lucie|": {
+   "jmeno": "Foltýnková Lucie",
+   "rocnik": 2010
+  },
+  "fruhauf miroslav|1984": {
+   "jmeno": "Frühauf Miroslav",
+   "rocnik": 1983
+  },
+  "glenz simon|": {
+   "jmeno": "Glenz Šimon",
+   "rocnik": 2017
+  },
+  "guran matej|": {
+   "jmeno": "Guřan Matěj",
+   "rocnik": 2011
+  },
+  "hadamcikova vladka|1972": {
+   "jmeno": "Hadamčíková Vlaďka",
+   "rocnik": 1973
+  },
+  "hejdulk jaroslav|1939": {
+   "jmeno": "Hejduk Jaroslav",
+   "rocnik": 1939
+  },
+  "hermann jan|1994": {
+   "jmeno": "Herrmann Jan",
+   "rocnik": 1994
+  },
+  "hermannova radmila|1968": {
+   "jmeno": "Herrmannová Radmila",
+   "rocnik": 1968
+  },
+  "hojdyszova lucie|1982": {
+   "jmeno": "Hojdyszová Lucie",
+   "rocnik": 1984
+  },
+  "holcanova barbora|1973": {
+   "jmeno": "Holšánová Barbora",
+   "rocnik": 1973
+  },
+  "holona dawid|1983": {
+   "jmeno": "Holona David",
+   "rocnik": 1983
+  },
+  "hrejsemnou pavel|": {
+   "jmeno": "Hrejsemnou Pavel",
+   "rocnik": 2009
+  },
+  "hudeczek pavek|1967": {
+   "jmeno": "Hudeczek Pavel",
+   "rocnik": 1967
+  },
+  "hudeczek pavel|1968": {
+   "jmeno": "Hudeczek Pavel",
+   "rocnik": 1967
+  },
+  "janecka roman|1981": {
+   "jmeno": "Janeček Roman",
+   "rocnik": 1981
+  },
+  "jankura josef|": {
+   "jmeno": "Jankura Josef",
+   "rocnik": 1940
+  },
+  "jeziorski petr|1978": {
+   "jmeno": "Jeziorski Piotr",
+   "rocnik": 1978
+  },
+  "kasina michak|1983": {
+   "jmeno": "Kasina Michal",
+   "rocnik": 1983
+  },
+  "kasna natalie|": {
+   "jmeno": "Kašná Natálie",
+   "rocnik": 2013
+  },
+  "kelnar jindrich|": {
+   "jmeno": "Kelnar Jindřich",
+   "rocnik": 2013
+  },
+  "kondasova iva|1978": {
+   "jmeno": "Kondasová Ivana",
+   "rocnik": 1978
+  },
+  "konvicka adam|1974": {
+   "jmeno": "Konvička Adam",
+   "rocnik": 1977
+  },
+  "konvickova martie|2008": {
+   "jmeno": "Konvičková Marie",
+   "rocnik": 2008
+  },
+  "kopackova sabina|": {
+   "jmeno": "Kopáčková Sabina",
+   "rocnik": 2017
+  },
+  "kozek michal|1980": {
+   "jmeno": "Kozel Michal",
+   "rocnik": 1980
+  },
+  "krajicek jan|1977": {
+   "jmeno": "Krajíček Jan",
+   "rocnik": 1976
+  },
+  "kral. artur|1979": {
+   "jmeno": "Kral Artur",
+   "rocnik": 1979
+  },
+  "krtkava rostislav|1972": {
+   "jmeno": "Křikava Rostislav",
+   "rocnik": 1972
+  },
+  "krupova lucie|1988": {
+   "jmeno": "Krupová Lucie",
+   "rocnik": 1987
+  },
+  "lysek jakub|": {
+   "jmeno": "Lýsek Jakub",
+   "rocnik": 2008
+  },
+  "mahulena pawlasova lucie|1978": {
+   "jmeno": "Pawlasová Lucie Mahulena",
+   "rocnik": 1978
+  },
+  "man dak jan|1989": {
+   "jmeno": "Manďák Jan",
+   "rocnik": 1989
+  },
+  "maxnerova viktorie|2018": {
+   "jmeno": "Maxnerová Viktorie",
+   "rocnik": 2019
+  },
+  "michalcik karel|": {
+   "jmeno": "Michalčík Karel",
+   "rocnik": 1959
+  },
+  "micka richard|": {
+   "jmeno": "Mička Richard",
+   "rocnik": 2013
+  },
+  "miklas martin|1981": {
+   "jmeno": "Miklas Martin",
+   "rocnik": 1978
+  },
+  "misar tomas|1974": {
+   "jmeno": "Mísař Tomáš",
+   "rocnik": 1977
+  },
+  "mu cka dominik|2012": {
+   "jmeno": "Mučka Dominik",
+   "rocnik": 2012
+  },
+  "mucka dominik|2013": {
+   "jmeno": "Mučka Dominik",
+   "rocnik": 2012
+  },
+  "muckova tereza|2012": {
+   "jmeno": "Mučková Tereza",
+   "rocnik": 2014
+  },
+  "ni cmanova ka cka|1986": {
+   "jmeno": "Ničmanová Kačka",
+   "rocnik": 1986
+  },
+  "nikola ivanov|1985": {
+   "jmeno": "Ivanov Nikola",
+   "rocnik": 1985
+  },
+  "nogol sergej|": {
+   "jmeno": "Nogol Sergej",
+   "rocnik": 1950
+  },
+  "pajek radovan|1971": {
+   "jmeno": "Pasek Radovan",
+   "rocnik": 1971
+  },
+  "paprskarova vanessa|2003": {
+   "jmeno": "Paprskářová Vanesa",
+   "rocnik": 2002
+  },
+  "pavelkova karolina|": {
+   "jmeno": "Pavelková Karolína",
+   "rocnik": 2011
+  },
+  "pieran adam|": {
+   "jmeno": "Pieran Adam",
+   "rocnik": 2013
+  },
+  "podeswa marek|1968": {
+   "jmeno": "Podeszwa Marek",
+   "rocnik": 1968
+  },
+  "podkova denisa|1998": {
+   "jmeno": "Popková Denisa",
+   "rocnik": 1998
+  },
+  "popaj tomas|1989": {
+   "jmeno": "Papaj Tomáš",
+   "rocnik": 1989
+  },
+  "popkova elen|2013": {
+   "jmeno": "Popková Elena",
+   "rocnik": 2013
+  },
+  "popkova nikola|2013": {
+   "jmeno": "Popková Nikola",
+   "rocnik": 2016
+  },
+  "pormanova nikol|2010": {
+   "jmeno": "Pormannová Nikol",
+   "rocnik": 2010
+  },
+  "pospisil petr|1980": {
+   "jmeno": "Pospíšil Petr",
+   "rocnik": 1979
+  },
+  "pospisil petr|1993": {
+   "jmeno": "Pospíšil Petr",
+   "rocnik": 1994
+  },
+  "pradkova hanka|1978": {
+   "jmeno": "Přádková Hana",
+   "rocnik": 1978
+  },
+  "prochnika karolina|1978": {
+   "jmeno": "Próchnicka Karolina",
+   "rocnik": 1978
+  },
+  "pszczotka natalia|1986": {
+   "jmeno": "Pszczólka Natalia",
+   "rocnik": 1986
+  },
+  "radek artim|1970": {
+   "jmeno": "Artim Radek",
+   "rocnik": 1970
+  },
+  "rancka jiri|1970": {
+   "jmeno": "Rončka Jiří",
+   "rocnik": 1970
+  },
+  "ranckova gabriela|1974": {
+   "jmeno": "Rončková Gabriela",
+   "rocnik": 1974
+  },
+  "rebisz mariusz|1971": {
+   "jmeno": "Rebisz Marius",
+   "rocnik": 1971
+  },
+  "rebisz mariusz|1972": {
+   "jmeno": "Rebisz Mariusz",
+   "rocnik": 1971
+  },
+  "rigl david|1983": {
+   "jmeno": "Rigo David",
+   "rocnik": 1983
+  },
+  "rod vladmir|1944": {
+   "jmeno": "Rod Vladimír",
+   "rocnik": 1944
+  },
+  "ruzicka matous|2013": {
+   "jmeno": "Růžička Matouš",
+   "rocnik": 2014
+  },
+  "ruzicka simon|2013": {
+   "jmeno": "Růžička Šimon",
+   "rocnik": 2014
+  },
+  "schubert jan|": {
+   "jmeno": "Schubert Jan",
+   "rocnik": 2016
+  },
+  "schvarzbacher jan|1962": {
+   "jmeno": "Schwarzbacher Jan",
+   "rocnik": 1962
+  },
+  "sedenka ludvik|": {
+   "jmeno": "Šeděnka Ludvík",
+   "rocnik": 1944
+  },
+  "skorna michal|1997": {
+   "jmeno": "Škorňa Michael",
+   "rocnik": 1997
+  },
+  "skrdova danuse|1966": {
+   "jmeno": "Škrdová Danuše",
+   "rocnik": 1965
+  },
+  "smelty jiri|1989": {
+   "jmeno": "Smelty Jiří",
+   "rocnik": 1990
+  },
+  "smola marek|2015": {
+   "jmeno": "Smolka Marek",
+   "rocnik": 2015
+  },
+  "smolka marek|": {
+   "jmeno": "Smolka Marek",
+   "rocnik": 2015
+  },
+  "snasel daniel|": {
+   "jmeno": "Snášel Daniel",
+   "rocnik": 2011
+  },
+  "snasel lukas|": {
+   "jmeno": "Snášel Lukáš",
+   "rocnik": 2013
+  },
+  "steinar miroslav|1938": {
+   "jmeno": "Steiner Miroslav",
+   "rocnik": 1939
+  },
+  "surcek jiri|1953": {
+   "jmeno": "Švrček Jiří",
+   "rocnik": 1953
+  },
+  "sustek miloslav|1936": {
+   "jmeno": "Šuster Miloslav",
+   "rocnik": 1936
+  },
+  "sustova sofie|2007": {
+   "jmeno": "Šustová Sofie",
+   "rocnik": 2006
+  },
+  "svobodova nikola|1991": {
+   "jmeno": "Svobodová Nikola",
+   "rocnik": 1990
+  },
+  "valent antonin|": {
+   "jmeno": "Valent Antonín",
+   "rocnik": 2011
+  },
+  "valent ondrej|": {
+   "jmeno": "Valent Ondřej",
+   "rocnik": 2012
+  },
+  "vaskova lucie|1978": {
+   "jmeno": "Vašková Lucie",
+   "rocnik": 1979
+  },
+  "vesela kamila|1969": {
+   "jmeno": "Veselá Kamila",
+   "rocnik": 1966
+  },
+  "vitaskova jana|1985": {
+   "jmeno": "Vitásková Jana",
+   "rocnik": 1986
+  },
+  "vitek lukas|": {
+   "jmeno": "Vítek Lukáš",
+   "rocnik": 1993
+  },
+  "vyzina cestmir|": {
+   "jmeno": "Vyzina Čestmír",
+   "rocnik": 1957
+  },
+  "weinelt karel|1941": {
+   "jmeno": "Weintl Karel",
+   "rocnik": 1941
+  },
+  "zboril kamil|": {
+   "jmeno": "Zbořil Kamil",
+   "rocnik": 1975
+  },
+  "zborilova elena|2012": {
+   "jmeno": "Zbořilová Elena",
+   "rocnik": 2015
+  },
+  "zborilova elena|2014": {
+   "jmeno": "Zbořilová Elena",
+   "rocnik": 2015
+  },
+  "zborilova marketa|2007": {
+   "jmeno": "Zbořilová Markéta",
+   "rocnik": 2008
+  }
+ },
+ "oddily": {
+  "3nt bratislava": "Bratislava",
+  "adventure zavada": "Adventure Závada",
+  "afc verovice": "AFC Veřovice",
+  "akademia biegania ornontowice": "Akademia Biegania Ornontowice",
+  "akademie": "Moravskoslezská obchodní akademie",
+  "alpsport": "Alpsport",
+  "anvil": "Anvil",
+  "ar prague": "AR Prague",
+  "atletika novy jicin": "Atletika Nový Jičín",
+  "b b tym": "B+B tým Ostrava",
+  "b b tym ostrava": "B+B tým Ostrava",
+  "babylonbike litultovice": "Babylonbike - Litultovice",
+  "banik ostrava": "Baník Ostrava",
+  "banik ostrava okd": "Baník Ostrava",
+  "baska": "Baška",
+  "baska team": "Baška",
+  "bb leisure": "BB Leisure",
+  "bb leisure olomouc": "BB Leisure",
+  "bb leisure time": "BB Leisure",
+  "be sky trail jablunkov silesian paws": "Jablunkov",
+  "bedkydsky dogmaraton team": "Beskydský Dogmaraton Team",
+  "behat nas bavi": "Běhat nás baví",
+  "behat nas bavi opava": "Běhat nás baví",
+  "beskydsky dogmaraton team": "Beskydský Dogmaraton Team",
+  "bezci sobe": "Běžci sobě",
+  "bezci sobe ostrava": "Běžci sobě",
+  "bezecka skola petry pastorove": "Běžecká škola Petry Pastorové",
+  "bezecky klub skripov": "BK Skřipov",
+  "bezim nebo lezu": "Běžím nebo lezu",
+  "bezim pro vaska": "Běžím pro Vaška",
+  "bike team opava": "BIKE TEAM OPAVA",
+  "bk ludgerovice": "BK Ludgeřovice",
+  "bk olbramice": "BK Olbramice",
+  "bk pribor": "Příbor",
+  "bk skripov": "BK Skřipov",
+  "bn p": "BnP",
+  "bnp": "BnP",
+  "bratislava": "Bratislava",
+  "brod": "STS Chvojkovice Brod",
+  "brusperk": "Brušperk",
+  "canicross opava": "Canicross Opava",
+  "canicross opava dudlik team": "Canicross Opava",
+  "ceske budejovice": "České Budějovice",
+  "cesky tesin": "Český Těšín",
+  "cesky tesin stanislavice": "Český Těšín",
+  "cheno": "Karmapa Cheno",
+  "chmelovy brok": "Chmelový Brok!!",
+  "chrudimaci": "Nordic walkink Chrudimaci",
+  "cisarska": "Fajna Cisarska!!! (Ano, bez diakritiky)",
+  "columbia montrail": "Columbia Montrail/ Čeladná",
+  "columbia montrail celadna": "Columbia Montrail/ Čeladná",
+  "cz": "CZ",
+  "dantyre pomlete kosti": "DANTYRE - Pomleté kosti",
+  "db zabreh": "Dolní Benešov - Zábřeh",
+  "dbz": "Dolní Benešov - Zábřeh",
+  "decathlon running team ostrava": "DECATHLON RUNNING TEAM OSTRAVA",
+  "devil s ultras": "Devil's Ultras",
+  "dolbend": "Dolbend",
+  "dolni benesov": "Dolní Benešov - Zábřeh",
+  "dolni benesov zabreh": "Dolní Benešov - Zábřeh",
+  "dosel a posel": "Došel a pošel",
+  "easy run": "Easy run - Raciborz",
+  "easy run raciborz": "Easy run - Raciborz",
+  "electrons": "electrons",
+  "eman team": "Eman Team",
+  "erholung team": "Erholung team",
+  "f m t": "F.M.T. Group",
+  "f m t group": "F.M.T. Group",
+  "fajna cisarska ano bez diakritiky": "Fajna Cisarska!!! (Ano, bez diakritiky)",
+  "fajna prajzska": "Fajna Prajzska",
+  "fc petrkovice": "FC Petřkovice Odra",
+  "fc petrkovice odra": "FC Petřkovice Odra",
+  "fenix sport senov": "Fénix sport Šenov",
+  "fialove kobry": "Fialové kobry",
+  "frydek mistek": "Frýdek - Místek",
+  "fyzio": "PŘECI fyzio",
+  "gliwice": "Gliwice",
+  "h rmax zory": "HRmax Żory",
+  "head kmc team": "HEAD KMC TEAM OPAVA",
+  "head kmc team opava": "HEAD KMC TEAM OPAVA",
+  "head pro team": "Head Pro Team Opava",
+  "head pro team opava": "Head Pro Team Opava",
+  "hladnovske gazely": "Hladnovské Gazely",
+  "ho start": "HO Start Ostrava",
+  "ho start ostrava": "HO Start Ostrava",
+  "horalko": "Horalko team",
+  "horalko team": "Horalko team",
+  "horni bludovice": "Horní Bludovice",
+  "hostalkovice": "ZŠ Hošťálkovice",
+  "hr max zory": "HRmax Żory",
+  "hrad pro team opava": "Head Pro Team Opava",
+  "hrmax zory": "HRmax Żory",
+  "hukvaldy": "Hukvaldy",
+  "in trener": "inTrenér Petr Kopřiva",
+  "in trener petr kopriva": "inTrenér Petr Kopřiva",
+  "international": "Team International!!!",
+  "jablunkov": "Jablunkov",
+  "jest erky v tahu": "JEŠT Ěrky v TAHU",
+  "jistebnik": "Jistebník",
+  "jof x team": "Jof - X - Team",
+  "jump sport": "Jump Sport",
+  "k b branice": "K. B. Branice",
+  "kapebaja": "Kapebaja",
+  "karmapa cheno": "Karmapa Cheno",
+  "karton team": "Team Karton",
+  "katrvan": "Tým Katrván",
+  "kb branice": "K. B. Branice",
+  "kedzierzyn kozle": "Kędzierzyn - Koźle",
+  "kilpi racing team": "Kilpi Racing Team",
+  "klimkovice": "Klimkovice",
+  "klub blaznu": "Klub Bláznů",
+  "klub duchodcu": "Klub Důchodců",
+  "klub duchodcu orlova": "Klub Důchodců",
+  "krasky": "Zralé krásky",
+  "krnov": "Krnov",
+  "ladermon": "Ladermon Team",
+  "ladermon team": "Ladermon Team",
+  "langsam aber sicher": "Langsam aber sicher",
+  "lassky bezecky klub koprivnice": "Lašský běžecký klub Kopřivnice",
+  "lassky sportovni klub": "Lašský sportovní klub",
+  "lassky sportovni klub frydek mistek": "Lašský sportovní klub",
+  "lepus cz": "Lepus.cz",
+  "lezu": "Běžím nebo lezu",
+  "liga 100 jistebnik": "Jistebník",
+  "light bike havi rov": "Team LightBIKE",
+  "litovel": "Litovel",
+  "litultovice": "Babylonbike - Litultovice",
+  "lsk fm": "Lašský sportovní klub",
+  "ludgerovice": "Ludgeřovice",
+  "mafia team lubliniec": "Mafia Team Lubliniec",
+  "mattoni freerun": "Mattoni Freerun",
+  "mattoni freerun ostrava": "Mattoni Freerun",
+  "mez mohelnice": "Mohelnice",
+  "mfr ostrava": "mfr ostrava",
+  "mk seitl ostrava": "MK Seitl Ostrava",
+  "mohelnice": "Mohelnice",
+  "morava": "Velká Morava",
+  "moravskoslezska obchodni akademie": "Moravskoslezská obchodní akademie",
+  "mosty": "SKI Mosty",
+  "msoa": "Moravskoslezská obchodní akademie",
+  "muks ilkus olkusz": "Muks Ilkus olkusz",
+  "mushing team ostrava": "Mushing team Ostrava",
+  "nordic walking olomouc": "Nordic walking Olomouc",
+  "nordic walking slovacko": "Nordic Walking Slovácko",
+  "nordic walkink chrudimaci": "Nordic walkink Chrudimaci",
+  "novy jicin": "Novy Jičín",
+  "novy jicin u stramberka": "Novy Jičín",
+  "nutrend crew": "Nutrend crew",
+  "nw beskydy brusperk": "Brušperk",
+  "o petrkovice": "Petřkovice",
+  "ob opava": "OB Opava",
+  "odry": "SKI CENTRUM ODRY",
+  "olbramice": "BK Olbramice",
+  "olesna": "Olešná",
+  "opava": "Opava",
+  "opava eman team": "Eman Team",
+  "orientacni beh opava": "OB Opava",
+  "orli ostrava": "Orli Ostrava",
+  "orlova poruba": "Orlová Poruba",
+  "ornontowice": "Akademia Biegania Ornontowice",
+  "ostrava": "Ostrava",
+  "ostrava hrabova": "Ostrava-Hrabová",
+  "ostrava hrabuvka": "Ostrava-Hrabová",
+  "ostrava msoa": "Moravskoslezská obchodní akademie",
+  "ostrava poruba": "Ostrava - Poruba",
+  "ostrava svinov": "Ostrava - Svinov",
+  "ostravak": "OSTRAVÁK",
+  "ostravar": "Ostravar",
+  "otrokovice": "TJ Jiskra Otrokovice",
+  "pastorove": "Běžecká škola Petry Pastorové",
+  "petrkovice": "Petřkovice",
+  "plesna": "Sokol Plesná",
+  "pomale sipy": "Pomalé šípy",
+  "pomale sipy koprivnice": "Pomalé šípy",
+  "porubsti rafani": "Porubští rafani",
+  "posel": "Došel a pošel",
+  "prague": "AR Prague",
+  "praha": "Praha",
+  "prajzska": "Fajna Prajzska",
+  "preci fyzio": "PŘECI fyzio",
+  "pribor": "Příbor",
+  "raciborz": "Easy run - Raciborz",
+  "racing olesna": "Olešná",
+  "rh opava": "Rudá hvězda Opava",
+  "rodina v pohybu": "Rodina v pohybu Opava",
+  "rodina v pohybu opava": "Rodina v pohybu Opava",
+  "ruda hvezda": "Rudá hvězda Opava",
+  "ruda hvezda opava": "Rudá hvězda Opava",
+  "run": "RUN",
+  "run 99 havi rov": "run99 Havířov",
+  "run the world": "Run the World",
+  "run the world cz": "Run the World",
+  "run99 havirov": "run99 Havířov",
+  "rybnicki klub nordic walking": "Rybnicki Klub Nordic Walking",
+  "rybnik": "SBD Energetyk Rybnik",
+  "rychvald": "Rychvald",
+  "s sk vitkovice": "SSK Vítkovice",
+  "sak k arvina": "SAK Karviná",
+  "sak karvina": "SAK Karviná",
+  "sbd energetyk rybnik": "SBD Energetyk Rybnik",
+  "scarpa alpsport": "Alpsport",
+  "seitl": "MK Seitl Ostrava",
+  "sicher": "Langsam aber sicher",
+  "silherovice": "Šilheřovice",
+  "sk ocelaci ostrava": "SK Oceláci Ostrava",
+  "sk ocelaci ostrava hello bank": "SK Oceláci Ostrava",
+  "ski centrum odry": "SKI CENTRUM ODRY",
+  "ski mosty": "SKI Mosty",
+  "skoczow": "Skoczow",
+  "slavoj rychvald": "Rychvald",
+  "slezan fm": "Slezan Frýdek-Místek",
+  "slezan frydek mistek": "Slezan Frýdek-Místek",
+  "slezan opava": "Slezan Opava",
+  "slezan opava ob": "Slezan Opava",
+  "slovacko": "Nordic Walking Slovácko",
+  "slovenska strela": "Slovenska strela",
+  "slusovice": "TJ Slušovice",
+  "sokol hukvaldy": "Hukvaldy",
+  "sokol opava": "SOKOL Opava",
+  "sokol plesna": "Sokol Plesná",
+  "sportovna": "SPORTOVNA",
+  "srtg havirov": "SRTG Havířov",
+  "ssk vitkovice": "SSK Vítkovice",
+  "ssk vitkovice bez cz": "SSK Vítkovice",
+  "ssk vitkovice mto": "SSK Vítkovice",
+  "stanislavice": "Český Těšín",
+  "stefko running team": "Štefko Running Team",
+  "stefko running team mks": "Štefko Running Team",
+  "stella petrkovice": "Stella Petřkovice Ladies",
+  "stella petrkovice ladies": "Stella Petřkovice Ladies",
+  "stg havirov": "SRTG Havířov",
+  "stg havirov spartan": "SRTG Havířov",
+  "stg opava": "STG Opava",
+  "stramberk": "Štramberk",
+  "sts chvojkovice brod": "STS Chvojkovice Brod",
+  "tatra koprivnice": "TJ Tatra Kopřivnice",
+  "tatran litovel": "Litovel",
+  "team": "Team",
+  "team international": "Team International!!!",
+  "team karton": "Team Karton",
+  "team light bike": "Team LightBIKE",
+  "team lightbike": "Team LightBIKE",
+  "tj jakl karvina": "Tj Jäkl Karviná",
+  "tj jiskra otrokovice": "TJ Jiskra Otrokovice",
+  "tj liga 100 olomouc": "TJ Liga 100 Olomouc",
+  "tj liga100 olomouc": "TJ Liga 100 Olomouc",
+  "tj nhkg": "TJ NHKG Ostrava",
+  "tj nhkg ostrava": "TJ NHKG Ostrava",
+  "tj ostrava": "TJ Ostrava",
+  "tj ostrava petrkovice": "TJ Ostrava",
+  "tj slusovice": "TJ Slušovice",
+  "tj sokol bobrovniky": "TJ Sokol Bobrovníky",
+  "tj tatra koprivnice": "TJ Tatra Kopřivnice",
+  "tk ostrava": "Tři křížky Ostrava",
+  "tk team ostrava": "Tři křížky Ostrava",
+  "total sport ostrava": "Total sport Ostrava",
+  "tranovicti prespolni zraloci": "Třanovičtí přespolní žraloci",
+  "tri krizky ostrava": "Tři křížky Ostrava",
+  "triatlon club ostrava": "Tři křížky Ostrava",
+  "triatlon klub ostrava": "Tři křížky Ostrava",
+  "tym katrvan": "Tým Katrván",
+  "ultras": "Devil's Ultras",
+  "vaska": "Běžím pro Vaška",
+  "velka morava": "Velká Morava",
+  "verovice": "AFC Veřovice",
+  "vetrkovice": "Vlčí smečka / Větřkovice",
+  "vitkov": "Vítkov",
+  "vitkovice": "Vítkovice",
+  "vlci smecka vetrkovice": "Vlčí smečka / Větřkovice",
+  "vrabcaci vrablovec": "Vrablovec",
+  "vrablovec": "Vrablovec",
+  "watt wapol athletic turbo team": "WATT - WAPOL athletic turbo team",
+  "x team hlucin": "X Team Hlučín",
+  "x trail": "X-Trail Orlová",
+  "x trail orlova": "X-Trail Orlová",
+  "x trail rychlohrad": "X-Trail Orlová",
+  "za sebe": "ZŠ Ludgeřovice",
+  "za sebe ludgerovice": "ZŠ Ludgeřovice",
+  "zivotice u noveho jicina": "Životice u Nového Jičina",
+  "zrale krasky": "Zralé krásky",
+  "zraloci": "Třanovičtí přespolní žraloci",
+  "zs hostalkovice": "ZŠ Hošťálkovice",
+  "zs ludgerovice": "ZŠ Ludgeřovice"
+ },
+ "ruzni": [
+  "smolka jan|1997||smolka jan|1998",
+  "sobek jakub|2003||sobek jakub|2004",
+  "hartig david|1973||hartik david|1973",
+  "kruml kamil|1972||krumr kamil|1972",
+  "luksa radek|1974||luksza radek|1974",
+  "pachola jakub|1997||pachula jakub|1997",
+  "bednarik jiri|||bednarik jiri|1945",
+  "glajcar tomasz|1976||grajcar tomas|1976",
+  "novakova jana|1985||nowakova hana|1985",
+  "sluka michal|1979||sutka michal|1979",
+  "jancik tomas|1989||janik tomas|1990",
+  "jerabkova sarka|1990||jerabkova sarka|1993",
+  "kolenko ondrej|1996||kolenko ondrej|1998",
+  "konecna gabriela|1980||kopecna gabriela|1979"
+ ],
  "oddilyNe": []
 }
