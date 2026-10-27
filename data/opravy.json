@@ -1,8 +1,12 @@
 {
  "verze": 1,
  "popis": "Opravy z karty Kontrola dat (BK Ludgeřovice). Klíče: jméno|ročník bez diakritiky, oddíl bez diakritiky.",
- "upraveno": "2026-10-27T07:06:11.695Z",
+ "upraveno": "2026-10-27T18:45:42.724Z",
  "bezci": {
+  "adamec matous|": {
+   "jmeno": "Adamec Matouš",
+   "rocnik": 2016
+  },
   "adamusova marie|1981": {
    "jmeno": "Adamusova Marie",
    "rocnik": 1982
@@ -15,17 +19,41 @@
    "jmeno": "Balcar Marek",
    "rocnik": 1979
   },
+  "balko adam|": {
+   "jmeno": "Balko Adam",
+   "rocnik": 2016
+  },
+  "balkova eva|": {
+   "jmeno": "Bálková Eva",
+   "rocnik": 2014
+  },
   "bardasevsky lubomir|1961": {
    "jmeno": "Bardaševský Lubomír",
    "rocnik": 1962
+  },
+  "bartko jonas|": {
+   "jmeno": "Bartko Jonáš",
+   "rocnik": 2017
   },
   "basik irena|1957": {
    "jmeno": "Basiak Irena",
    "rocnik": 1957
   },
+  "beil matyas|": {
+   "jmeno": "Beil Matyáš",
+   "rocnik": 2016
+  },
   "benes richard|2008": {
    "jmeno": "Beneš Richard",
    "rocnik": 2007
+  },
+  "berousek petr|": {
+   "jmeno": "Berousek Petr",
+   "rocnik": 2014
+  },
+  "berouskova eliska|": {
+   "jmeno": "Berousková Eliška",
+   "rocnik": 2012
   },
   "bezas petr|1976": {
    "jmeno": "Belas Petr",
@@ -43,6 +71,10 @@
    "jmeno": "Brziaková Elen",
    "rocnik": 2016
   },
+  "cahel mikulas|": {
+   "jmeno": "Cahel Mikuláš",
+   "rocnik": 2015
+  },
   "casarova debora|2012": {
    "jmeno": "Časarová Debora",
    "rocnik": 2014
@@ -54,6 +86,10 @@
   "cerna iva|1974": {
    "jmeno": "Černá Iva",
    "rocnik": 1976
+  },
+  "ciencialova rebeca|": {
+   "jmeno": "Ciencialová Rebeca",
+   "rocnik": 2012
   },
   "coolen malcolm|1960": {
    "jmeno": "Collen Malcolm",
@@ -79,29 +115,65 @@
    "jmeno": "Drobec Michal",
    "rocnik": 2011
   },
+  "dudek tobias|": {
+   "jmeno": "Dudek Tobiáš",
+   "rocnik": 2013
+  },
   "durajkova vanesska|2008": {
    "jmeno": "Ďurajková Vanessa",
    "rocnik": 2008
+  },
+  "foltynek samuel|": {
+   "jmeno": "Foltýnek Samuel",
+   "rocnik": 2015
   },
   "foltynkova lucie|": {
    "jmeno": "Foltýnková Lucie",
    "rocnik": 2010
   },
+  "foltysova lily anne|": {
+   "jmeno": "Foltysová Lily Anne",
+   "rocnik": 2011
+  },
   "fruhauf miroslav|1984": {
    "jmeno": "Frühauf Miroslav",
    "rocnik": 1983
+  },
+  "gilik eduard|": {
+   "jmeno": "Gilík Eduard",
+   "rocnik": 2017
   },
   "glenz simon|": {
    "jmeno": "Glenz Šimon",
    "rocnik": 2017
   },
+  "gorniakova denisa|": {
+   "jmeno": "Gorniaková Denisa",
+   "rocnik": 2013
+  },
+  "graca daniel|": {
+   "jmeno": "Graca Daniel",
+   "rocnik": 2010
+  },
+  "gumala theodor|": {
+   "jmeno": "Gumala Theodor",
+   "rocnik": 2015
+  },
   "guran matej|": {
    "jmeno": "Guřan Matěj",
    "rocnik": 2011
   },
+  "guranova valerie|": {
+   "jmeno": "Guřanová Valérie",
+   "rocnik": 2013
+  },
   "hadamcikova vladka|1972": {
    "jmeno": "Hadamčíková Vlaďka",
    "rocnik": 1973
+  },
+  "hajducek matyas|": {
+   "jmeno": "Hajduček Matyáš",
+   "rocnik": 2016
   },
   "hejdulk jaroslav|1939": {
    "jmeno": "Hejduk Jaroslav",
@@ -115,9 +187,21 @@
    "jmeno": "Herrmannová Radmila",
    "rocnik": 1968
   },
+  "hlasny stepan|": {
+   "jmeno": "Hlásný Štěpán",
+   "rocnik": 2012
+  },
   "hojdyszova lucie|1982": {
    "jmeno": "Hojdyszová Lucie",
    "rocnik": 1984
+  },
+  "holan libor|": {
+   "jmeno": "Holaň Libor",
+   "rocnik": 2016
+  },
+  "holberg matyas|": {
+   "jmeno": "Holberg Matyáš",
+   "rocnik": 2012
   },
   "holcanova barbora|1973": {
    "jmeno": "Holšánová Barbora",
@@ -147,9 +231,21 @@
    "jmeno": "Jankura Josef",
    "rocnik": 1940
   },
+  "janosova simona|": {
+   "jmeno": "Janošová Simona",
+   "rocnik": 2016
+  },
   "jeziorski petr|1978": {
    "jmeno": "Jeziorski Piotr",
    "rocnik": 1978
+  },
+  "kana adrian|": {
+   "jmeno": "Kaňa Adrian",
+   "rocnik": 2014
+  },
+  "karcmar vojtech|": {
+   "jmeno": "Karčmář Vojtěch",
+   "rocnik": 2011
   },
   "kasina michak|1983": {
    "jmeno": "Kasina Michal",
@@ -162,6 +258,26 @@
   "kelnar jindrich|": {
    "jmeno": "Kelnar Jindřich",
    "rocnik": 2013
+  },
+  "klepackova barbora|": {
+   "jmeno": "Klepáčková Barbora",
+   "rocnik": 2011
+  },
+  "klestil karel|": {
+   "jmeno": "Klestil Karel",
+   "rocnik": 2018
+  },
+  "kocur ondrej|": {
+   "jmeno": "Kocur Ondřej",
+   "rocnik": 2016
+  },
+  "kocur simon|": {
+   "jmeno": "Kocur Šimon",
+   "rocnik": 2011
+  },
+  "kolacek stepan|": {
+   "jmeno": "Koláček Štěpán",
+   "rocnik": 2015
   },
   "kondasova iva|1978": {
    "jmeno": "Kondasová Ivana",
@@ -179,9 +295,25 @@
    "jmeno": "Kopáčková Sabina",
    "rocnik": 2017
   },
+  "korbas adam|": {
+   "jmeno": "Korbáš Adam",
+   "rocnik": 2017
+  },
+  "kosar simon|": {
+   "jmeno": "Košař Šimon",
+   "rocnik": 2014
+  },
+  "kotala jiri|": {
+   "jmeno": "Kotala Jiří",
+   "rocnik": 2016
+  },
   "kozek michal|1980": {
    "jmeno": "Kozel Michal",
    "rocnik": 1980
+  },
+  "kozusnikova sofie|": {
+   "jmeno": "Kožušníková Sofie",
+   "rocnik": 2011
   },
   "krajicek jan|1977": {
    "jmeno": "Krajíček Jan",
@@ -191,6 +323,10 @@
    "jmeno": "Kral Artur",
    "rocnik": 1979
   },
+  "krivacka tomas|": {
+   "jmeno": "Krivačka Tomáš",
+   "rocnik": 2012
+  },
   "krtkava rostislav|1972": {
    "jmeno": "Křikava Rostislav",
    "rocnik": 1972
@@ -199,21 +335,61 @@
    "jmeno": "Krupová Lucie",
    "rocnik": 1987
   },
+  "kucerova berenika|": {
+   "jmeno": "Kučerová Berenika",
+   "rocnik": 2015
+  },
+  "kuligova natalie|": {
+   "jmeno": "Kuligová Natálie",
+   "rocnik": 2011
+  },
+  "lainka ondrej|": {
+   "jmeno": "Lainka Ondřej",
+   "rocnik": 2012
+  },
+  "lidvinova dominika|": {
+   "jmeno": "Lidvinová Dominika",
+   "rocnik": 2012
+  },
+  "lorinc marek|": {
+   "jmeno": "Lörinc Marek",
+   "rocnik": 2017
+  },
+  "lupa david|": {
+   "jmeno": "Lupa David",
+   "rocnik": 2012
+  },
   "lysek jakub|": {
    "jmeno": "Lýsek Jakub",
    "rocnik": 2008
+  },
+  "machova nikol|": {
+   "jmeno": "Machová Nikol",
+   "rocnik": 2011
   },
   "mahulena pawlasova lucie|1978": {
    "jmeno": "Pawlasová Lucie Mahulena",
    "rocnik": 1978
   },
+  "malurek adam|": {
+   "jmeno": "Malurek Adam",
+   "rocnik": 2015
+  },
   "man dak jan|1989": {
    "jmeno": "Manďák Jan",
    "rocnik": 1989
   },
+  "markevic jan|": {
+   "jmeno": "Markevič Jan",
+   "rocnik": 2016
+  },
   "maxnerova viktorie|2018": {
    "jmeno": "Maxnerová Viktorie",
    "rocnik": 2019
+  },
+  "mensikova gabriela|": {
+   "jmeno": "Menšíková Gabriela",
+   "rocnik": 2017
   },
   "michalcik karel|": {
    "jmeno": "Michalčík Karel",
@@ -231,6 +407,10 @@
    "jmeno": "Mísař Tomáš",
    "rocnik": 1977
   },
+  "mrozkova ema|": {
+   "jmeno": "Mrózková Ema",
+   "rocnik": 2015
+  },
   "mu cka dominik|2012": {
    "jmeno": "Mučka Dominik",
    "rocnik": 2012
@@ -243,9 +423,21 @@
    "jmeno": "Mučková Tereza",
    "rocnik": 2014
   },
+  "najser marek|": {
+   "jmeno": "Najser Marek",
+   "rocnik": 2015
+  },
+  "nesrstova natalie|": {
+   "jmeno": "Nesrstová Natálie",
+   "rocnik": 2013
+  },
   "ni cmanova ka cka|1986": {
    "jmeno": "Ničmanová Kačka",
    "rocnik": 1986
+  },
+  "nickel vitezslav|": {
+   "jmeno": "Nickel Vítězslav",
+   "rocnik": 2013
   },
   "nikola ivanov|1985": {
    "jmeno": "Ivanov Nikola",
@@ -255,16 +447,40 @@
    "jmeno": "Nogol Sergej",
    "rocnik": 1950
   },
+  "novobilsky tadeas|": {
+   "jmeno": "Novobilský Tadeáš",
+   "rocnik": 2010
+  },
+  "outratova natalie|": {
+   "jmeno": "Outratová Natálie",
+   "rocnik": 2010
+  },
   "pajek radovan|1971": {
    "jmeno": "Pasek Radovan",
    "rocnik": 1971
+  },
+  "palkova marie|": {
+   "jmeno": "Pálková Marie",
+   "rocnik": 2013
   },
   "paprskarova vanessa|2003": {
    "jmeno": "Paprskářová Vanesa",
    "rocnik": 2002
   },
+  "paskudova jana|": {
+   "jmeno": "Paskudová Jana",
+   "rocnik": 2013
+  },
   "pavelkova karolina|": {
    "jmeno": "Pavelková Karolína",
+   "rocnik": 2011
+  },
+  "peroutka hugo|": {
+   "jmeno": "Peroutka Hugo",
+   "rocnik": 2016
+  },
+  "petrowska julie|": {
+   "jmeno": "Petrowská Julie",
    "rocnik": 2011
   },
   "pieran adam|": {
@@ -278,6 +494,10 @@
   "podkova denisa|1998": {
    "jmeno": "Popková Denisa",
    "rocnik": 1998
+  },
+  "ponc klaudie|": {
+   "jmeno": "Ponc Klaudie",
+   "rocnik": 2013
   },
   "popaj tomas|1989": {
    "jmeno": "Papaj Tomáš",
@@ -363,6 +583,14 @@
    "jmeno": "Šeděnka Ludvík",
    "rocnik": 1944
   },
+  "sidikova natalie|": {
+   "jmeno": "Šidíková Natálie",
+   "rocnik": 2015
+  },
+  "skacelova kristyna|": {
+   "jmeno": "Skácelová Kristýna",
+   "rocnik": 2012
+  },
   "skorna michal|1997": {
    "jmeno": "Škorňa Michael",
    "rocnik": 1997
@@ -370,6 +598,10 @@
   "skrdova danuse|1966": {
    "jmeno": "Škrdová Danuše",
    "rocnik": 1965
+  },
+  "sladecek jachym|": {
+   "jmeno": "Sládeček Jáchym",
+   "rocnik": 2016
   },
   "smelty jiri|1989": {
    "jmeno": "Smelty Jiří",
@@ -391,9 +623,25 @@
    "jmeno": "Snášel Lukáš",
    "rocnik": 2013
   },
+  "sofer filip|": {
+   "jmeno": "Šofer Filip",
+   "rocnik": 2010
+  },
+  "solawa martin|": {
+   "jmeno": "Solawa Martin",
+   "rocnik": 2016
+  },
+  "somodi filip|": {
+   "jmeno": "Šomodi Filip",
+   "rocnik": 2011
+  },
   "steinar miroslav|1938": {
    "jmeno": "Steiner Miroslav",
    "rocnik": 1939
+  },
+  "stoklasova edita|": {
+   "jmeno": "Stoklasová Edita",
+   "rocnik": 2014
   },
   "surcek jiri|1953": {
    "jmeno": "Švrček Jiří",
@@ -411,6 +659,26 @@
    "jmeno": "Svobodová Nikola",
    "rocnik": 1990
   },
+  "sykora michael|": {
+   "jmeno": "Sýkora Michael",
+   "rocnik": 2017
+  },
+  "sykora patrik|": {
+   "jmeno": "Sýkora Patrik",
+   "rocnik": 2013
+  },
+  "tarkotova denisa|": {
+   "jmeno": "Tarkotová Denisa",
+   "rocnik": 2015
+  },
+  "uher filip|": {
+   "jmeno": "Uher Filip",
+   "rocnik": 2014
+  },
+  "vaclavik lukas|": {
+   "jmeno": "Václavík Lukáš",
+   "rocnik": 2012
+  },
   "valent antonin|": {
    "jmeno": "Valent Antonín",
    "rocnik": 2011
@@ -423,9 +691,21 @@
    "jmeno": "Vašková Lucie",
    "rocnik": 1979
   },
+  "vecerkova marie|": {
+   "jmeno": "Večerková Marie",
+   "rocnik": 2017
+  },
   "vesela kamila|1969": {
    "jmeno": "Veselá Kamila",
    "rocnik": 1966
+  },
+  "vicha vojtech|": {
+   "jmeno": "Vícha Vojtěch",
+   "rocnik": 2016
+  },
+  "vilasek adam|": {
+   "jmeno": "Vilášek Adam",
+   "rocnik": 2017
   },
   "vitaskova jana|1985": {
    "jmeno": "Vitásková Jana",
@@ -435,6 +715,14 @@
    "jmeno": "Vítek Lukáš",
    "rocnik": 1993
   },
+  "vokrinek jonas|": {
+   "jmeno": "Vokřínek Jonáš",
+   "rocnik": 2011
+  },
+  "voznakova nina|": {
+   "jmeno": "Vozňáková Nina",
+   "rocnik": 2010
+  },
   "vyzina cestmir|": {
    "jmeno": "Vyzina Čestmír",
    "rocnik": 1957
@@ -442,6 +730,18 @@
   "weinelt karel|1941": {
    "jmeno": "Weintl Karel",
    "rocnik": 1941
+  },
+  "weyersova erika|": {
+   "jmeno": "Weyersová Erika",
+   "rocnik": 2016
+  },
+  "zach david|": {
+   "jmeno": "Zach David",
+   "rocnik": 2017
+  },
+  "zaoral maxmilian|": {
+   "jmeno": "Zaoral Maxmilián",
+   "rocnik": 2010
   },
   "zboril kamil|": {
    "jmeno": "Zbořil Kamil",
@@ -458,6 +758,10 @@
   "zborilova marketa|2007": {
    "jmeno": "Zbořilová Markéta",
    "rocnik": 2008
+  },
+  "zlamsidlo ales|": {
+   "jmeno": "Zlamšidlo Aleš",
+   "rocnik": 2017
   }
  },
  "oddily": {
@@ -757,6 +1061,7 @@
   "luksa radek|1974||luksza radek|1974",
   "novakova jana|1985||nowakova hana|1985",
   "pachola jakub|1997||pachula jakub|1997",
+  "rinka vojtech|2012||roncka vojtech|2012",
   "sluka michal|1979||sutka michal|1979",
   "smolka jan|1997||smolka jan|1998",
   "sobek jakub|2003||sobek jakub|2004"
