@@ -3,6 +3,7 @@
     "nazev": "BK Ludgeřovice",
     "moto": "Od útlého mládí po aktivní stáří",
     "web": "https://www.bkludgerovice.cz/",
+    "vysledkyWeb": "https://vysledky.bkludgerovice.cz/",
     "facebook": "https://www.facebook.com/BKLudgerovice/",
     "instagram": "https://www.instagram.com/bkludgerovice",
     "oddilZacina": [
@@ -65,6 +66,7 @@
   },
   "pristi": [
     {
+      "kod": "L kros",
       "nazev": "Ludgeřovický kros",
       "datum": "2026-11-14"
     }

@@ -1,6 +1,6 @@
 {
  "verze": 1,
- "popis": "Opravy z nástroje Kontrola dat (BK Ludgeřovice). Klíče: jméno|ročník bez diakritiky, oddíl bez diakritiky.",
+ "popis": "Opravy z karty Kontrola dat (BK Ludgeřovice). Klíče: jméno|ročník bez diakritiky, oddíl bez diakritiky.",
  "upraveno": "2026-10-27T07:06:11.695Z",
  "bezci": {
   "adamusova marie|1981": {
@@ -746,20 +746,20 @@
   "zs ludgerovice": "ZŠ Ludgeřovice"
  },
  "ruzni": [
-  "smolka jan|1997||smolka jan|1998",
-  "sobek jakub|2003||sobek jakub|2004",
-  "hartig david|1973||hartik david|1973",
-  "kruml kamil|1972||krumr kamil|1972",
-  "luksa radek|1974||luksza radek|1974",
-  "pachola jakub|1997||pachula jakub|1997",
   "bednarik jiri|||bednarik jiri|1945",
   "glajcar tomasz|1976||grajcar tomas|1976",
-  "novakova jana|1985||nowakova hana|1985",
-  "sluka michal|1979||sutka michal|1979",
+  "hartig david|1973||hartik david|1973",
   "jancik tomas|1989||janik tomas|1990",
   "jerabkova sarka|1990||jerabkova sarka|1993",
   "kolenko ondrej|1996||kolenko ondrej|1998",
-  "konecna gabriela|1980||kopecna gabriela|1979"
+  "konecna gabriela|1980||kopecna gabriela|1979",
+  "kruml kamil|1972||krumr kamil|1972",
+  "luksa radek|1974||luksza radek|1974",
+  "novakova jana|1985||nowakova hana|1985",
+  "pachola jakub|1997||pachula jakub|1997",
+  "sluka michal|1979||sutka michal|1979",
+  "smolka jan|1997||smolka jan|1998",
+  "sobek jakub|2003||sobek jakub|2004"
  ],
  "oddilyNe": []
 }
