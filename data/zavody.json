@@ -12,28 +12,23 @@
   },
   "serie": [
     {
+      "kod": "L kros",
+      "nazev": "Ludgeřovický kros",
+      "mesic": 11,
+      "popis": "Krosový závod spojený se Dnem válečných veteránů.",
+      "web": "https://www.bkludgerovice.cz/l-kros/"
+    },
+    {
       "kod": "L15",
       "nazev": "Ludgeřovická 15",
       "mesic": 3,
       "popis": "Silniční závod v Ludgeřovicích, pořádáme ho od roku 2010."
     },
     {
-      "kod": "L kros",
-      "nazev": "Ludgeřovický kros",
-      "mesic": 11,
-      "popis": "Krosový závod spojený se Dnem válečných veteránů."
-    },
-    {
       "kod": "Zimní běh",
-      "nazev": "Zimní běh Hlučín",
+      "nazev": "Zimní běh",
       "mesic": 1,
       "popis": "Lednový závod v Hlučíně."
-    },
-    {
-      "kod": "Prajzské kilo",
-      "nazev": "Prajzské kilo",
-      "mesic": 9,
-      "popis": "Ultratrail historickou krajinou Hlučínska."
     },
     {
       "kod": "Lstíhačka",
@@ -48,8 +43,14 @@
       "popis": "Sportovně-společenská akce, začíná vyřazovacím během."
     },
     {
+      "kod": "Prajzské kilo",
+      "nazev": "Prajzské kilo",
+      "mesic": 9,
+      "popis": "Ultratrail historickou krajinou Hlučínska."
+    },
+    {
       "kod": "L20",
-      "nazev": "Ludgeřovická dvacítka",
+      "nazev": "Ludgeřovická 20",
       "mesic": 6,
       "popis": "Historický závod z let 1984–1995."
     }
@@ -59,7 +60,8 @@
     "Zimní běh (2026)": "2026-01-25",
     "L15 (2025)": "2025-03-01",
     "L15 (2026)": "2026-03-07",
-    "Lstíhačka (2025)": "2025-06-10"
+    "Lstíhačka (2025)": "2025-06-10",
+    "L kros (2026)": "2026-11-14"
   },
   "pristi": [
     {

@@ -1,6 +1,9 @@
 {
-  "verze": 1,
-  "popis": "Opravy z nástroje Kontrola dat. Soubor nepřepisujte ručně.",
-  "bezci": {},
-  "oddily": {}
+ "verze": 1,
+ "popis": "Opravy z karty Kontrola dat (BK Ludgeřovice). Klíče: jméno|ročník bez diakritiky, oddíl bez diakritiky.",
+ "upraveno": "2026-10-27T06:47:28.820Z",
+ "bezci": {},
+ "oddily": {},
+ "ruzni": [],
+ "oddilyNe": []
 }
