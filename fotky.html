@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fotky a diplomy – BK Ludgeřovice</title>
+<meta name="description" content="Najdi své fotky ze závodu podle startovního čísla nebo jména a stáhni si elektronický diplom.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BK Ludgeřovice">
+<meta property="og:title" content="Fotky a diplomy – BK Ludgeřovice">
+<meta property="og:description" content="Najdi své fotky ze závodu podle startovního čísla a stáhni si elektronický diplom.">
+<meta property="og:url" content="https://vysledky.bkludgerovice.cz/fotky.html">
+<meta property="og:image" content="https://vysledky.bkludgerovice.cz/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --red:#c71720; --red-deep:#9e0f1c; --on-red:#ffffff;
+  --paper:#ffffff; --page:#f3f1f0; --ink:#1b1918; --muted:#655d5b; --line:#ddd6d4;
+  --soft:#faf3f2; --bar:#1b1918; --bar-ink:#ffffff; --bar-muted:#b9b1af;
+  --gold:#c9a227; --silver:#9aa0a6; --bronze:#b0703c;
+  --s1:#c71720; --s2:#1b1918; --s3:#8a817f; --s4:#7a0e18; --s5:#ef8c95; --s6:#cdbfbc; --s7:#4d4644;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --red:#e0293a; --red-deep:#ff6b78; --paper:#1d1b1b; --page:#141313; --ink:#f2efee; --muted:#b0a7a5; --line:#363231;
+  --soft:#2a1e1f; --bar:#000000; --s2:#e9e4e2; --s3:#9b9290; --s4:#ff7d89; --s6:#6b6260; --s7:#c2b9b7; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --red:#e0293a; --red-deep:#ff6b78; --paper:#1d1b1b; --page:#141313; --ink:#f2efee; --muted:#b0a7a5; --line:#363231;
+  --soft:#2a1e1f; --bar:#000000; --s2:#e9e4e2; --s3:#9b9290; --s4:#ff7d89; --s6:#6b6260; --s7:#c2b9b7; color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bar)}
+img{max-width:100%}
+a{color:inherit}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px}
+
+/* ŠTÍT: záhlaví rozdělené jako klubové logo – vlevo bílé pole, vpravo červené */
+.shield{background:linear-gradient(90deg,var(--paper) 0 50%,var(--red) 50% 100%)}
+.shield .wrap{display:grid;grid-template-columns:1fr 1fr;min-height:200px}
+.sh-left{display:flex;align-items:center;gap:20px;padding:28px 28px 28px 0;background:var(--paper)}
+.logo-link{display:block;flex:none;border-radius:6px}
+.logo-link:hover img{transform:translateY(-2px)}
+.club a{color:inherit;text-decoration:none}
+.club a:hover{text-decoration:underline;text-underline-offset:3px}
+.sh-left img{display:block;transition:transform .15s;width:96px;height:auto;flex:none;filter:drop-shadow(0 2px 0 rgba(0,0,0,.08))}
+.sh-left .club{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.4vw,26px);line-height:1;letter-spacing:.02em;color:var(--red);margin:0}
+.sh-left h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,5.6vw,68px);line-height:.9;margin:4px 0 0;text-wrap:balance}
+.sh-right{background:var(--red);color:var(--on-red);padding:28px 0 28px 32px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.motto{font-family:var(--display);font-style:italic;font-weight:800;font-size:clamp(30px,4.2vw,52px);line-height:.95;margin:0;max-width:12ch}
+.social{display:flex;gap:10px;flex-wrap:wrap}
+.social a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:7px 14px 7px 10px;border:2px solid rgba(255,255,255,.85);border-radius:999px;color:#fff;min-height:40px}
+.social a:hover{background:#fff;color:#c71720}
+.social svg{width:20px;height:20px;flex:none}
+@media (max-width:760px){
+  .shield{background:var(--paper)}
+  .shield .wrap{grid-template-columns:1fr;padding-inline:0}
+  .sh-left{padding:20px 16px}
+  .sh-left img{width:72px}
+  .sh-right{padding:18px 16px 20px}
+}
+
+/* navigace */
+nav.tabs{background:var(--bar);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+nav.tabs .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav.tabs button{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:.02em;background:none;border:0;color:var(--bar-muted);padding:12px 14px 10px;border-bottom:4px solid transparent;cursor:pointer;white-space:nowrap;min-height:48px}
+nav.tabs button:hover{color:#fff}
+nav.tabs button[aria-selected="true"]{color:#fff;border-bottom-color:var(--red)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+nav.tabs button:focus-visible{outline-color:#fff;outline-offset:-3px}
+
+main{padding-block:28px 56px}
+[hidden]{display:none!important}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.4vw,38px);line-height:1;margin:0 0 6px}
+h3{font-family:var(--display);font-weight:800;font-size:24px;line-height:1.05;margin:0 0 10px}
+.lead{color:var(--muted);margin:0 0 20px;max-width:70ch}
+.block{margin-top:40px}
+.block:first-child{margin-top:0}
+.panel{background:var(--paper);border:1px solid var(--line);padding:20px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+
+/* čísla v přehledu – psaná jako věta, ne jako dlaždice */
+.facts{display:flex;flex-wrap:wrap;gap:6px 28px;margin:0;padding:0;list-style:none}
+.facts li{font-size:15px;color:var(--muted)}
+.facts b{display:block;font-family:var(--display);font-weight:800;font-size:34px;line-height:1;color:var(--ink)}
+
+/* příští závod */
+.next{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--soft);border-left:6px solid var(--red);padding:14px 18px;margin-bottom:28px}
+.next b{font-family:var(--display);font-size:24px;font-weight:800}
+
+/* poslední závod */
+.latest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+@media (max-width:760px){.latest{grid-template-columns:1fr}}
+.podium{list-style:none;margin:0;padding:0}
+.podium li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line)}
+.podium li:last-child{border-bottom:0}
+.medal{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;font-family:var(--display);font-weight:800;color:#fff;font-size:17px;line-height:1}
+.m1{background:var(--gold)} .m2{background:var(--silver)} .m3{background:var(--bronze)}
+.podium .t{font-family:var(--display);font-weight:600;font-size:20px}
+
+/* časová osa závodů */
+.matrix-box{overflow-x:auto;background:var(--paper);border:1px solid var(--line)}
+table.matrix{border-collapse:collapse;font-size:13px}
+table.matrix th,table.matrix td{padding:0;border:0;text-align:center}
+table.matrix thead th{font-family:var(--display);font-weight:600;font-size:14px;color:var(--muted);padding:10px 2px 6px;writing-mode:vertical-rl;transform:rotate(180deg);height:56px;vertical-align:bottom}
+table.matrix tbody th{position:sticky;left:0;background:var(--paper);text-align:left;font-family:var(--display);font-weight:600;font-size:17px;padding:4px 14px 4px 14px;white-space:nowrap;z-index:1}
+table.matrix td{width:30px;min-width:30px;height:36px}
+table.matrix td.gap{width:14px;min-width:14px;background:repeating-linear-gradient(90deg,transparent 0 5px,var(--line) 5px 6px,transparent 6px 14px)}
+.dot{display:inline-grid;place-items:center;border-radius:50%;border:0;padding:0;cursor:pointer;color:#fff;font-size:0;vertical-align:middle}
+.dot:hover,.dot:focus-visible{transform:scale(1.18)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:14px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+
+/* formuláře */
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-bottom:14px}
+.toolbar label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);font-weight:600}
+input,select{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:9px 11px;min-height:44px;max-width:100%}
+input[type=search]{min-width:min(100%,260px)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:15px;font-weight:600;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:7px 14px;border-radius:999px;cursor:pointer;min-height:40px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip small{font-weight:500;opacity:.7;margin-left:4px}
+.btn{font:inherit;font-weight:600;border:2px solid var(--red);background:var(--red);color:#fff;padding:8px 16px;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.btn.ghost{background:transparent;color:var(--red)}
+.linkbtn{font:inherit;background:none;border:0;padding:0;color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;cursor:pointer;text-align:left}
+.linkbtn:hover{text-decoration-color:var(--red);color:var(--red)}
+
+/* tabulky */
+.tbox{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--paper);border:1px solid var(--line)}
+table.res{border-collapse:collapse;width:100%;font-size:15px}
+table.res th,table.res td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:baseline}
+table.res th{font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap;background:var(--paper)}
+table.res td.n,table.res th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+table.res tr.club td{background:var(--soft)}
+table.res tr:last-child td{border-bottom:0}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:3px;background:var(--red);color:#fff;margin-left:6px;vertical-align:1px}
+.sexbadge{display:inline-block;min-width:22px;text-align:center;font-weight:700;font-size:12px;border:1px solid var(--line);border-radius:3px;padding:0 4px;color:var(--muted)}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+.more{margin-top:12px}
+
+/* profil běžce */
+.profile-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.profile-head h2{font-size:clamp(34px,5vw,52px)}
+.series-runs{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.series-runs li{display:flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);padding:6px 12px 6px 8px;border-radius:999px;font-size:15px}
+.series-runs i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.series-runs b{font-family:var(--display);font-size:20px}
+button.chip i{width:12px;height:12px;border-radius:50%;display:inline-block;margin-right:6px;vertical-align:-1px}
+button.chip b{font-family:var(--display);font-size:18px;margin-left:4px}
+.sharebar{display:flex;flex-wrap:wrap;gap:8px}
+.sharebar .btn{gap:8px;font-size:15px}
+.sharebar svg{width:18px;height:18px}
+.btn.ghost:hover{background:var(--soft)}
+.tchart .tline{stroke:var(--ink);stroke-width:2.5}
+.tchart .tpt{fill:var(--ink)}
+.tchart .bpt{fill:var(--gold);stroke:var(--paper);stroke-width:2}
+.tchart .tlabel{font-weight:600;fill:var(--ink)!important;font-size:12px!important}
+.tchart .hint{font-size:11px}
+.tchart .pline{stroke:var(--red);stroke-width:2;stroke-dasharray:6 5}
+.tchart .pband{fill:var(--red);opacity:.18}
+.tchart .ppt{fill:var(--paper);stroke:var(--red);stroke-width:3}
+.tchart .plabel{fill:var(--red)!important;font-weight:700;font-size:12px!important}
+.chart .mark{stroke:var(--gold);stroke-width:3}
+.chart .marklabel{fill:var(--ink)!important;font-weight:700;font-size:12px!important}
+.predict{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;background:var(--soft);border-left:6px solid var(--red);padding:14px 18px;margin-top:12px}
+.predict>div{display:flex;flex-direction:column}
+.predict b{font-family:var(--display);font-weight:800;font-size:40px;line-height:1.05}
+.predict p{flex:1 1 300px;margin:0}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:4px;font-weight:600;z-index:20;max-width:90vw}
+button.chip small{margin-left:4px}
+.vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.iconbtn{display:inline-grid;place-items:center;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--muted);cursor:pointer;padding:0}
+.iconbtn:hover{color:var(--red);border-color:var(--red)}
+.iconbtn svg{width:16px;height:16px}
+.tag.gold{background:var(--gold)}
+.picker{margin:0 0 18px}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:center}
+@media (max-width:760px){.duo{grid-template-columns:1fr}}
+.score{text-align:center;padding:8px 12px}
+.score b{display:block;font-family:var(--display);font-weight:800;font-size:72px;line-height:1;color:var(--red)}
+.score span{font-size:14px;color:var(--muted);display:block;max-width:18ch;margin:4px auto 0}
+.tchart .duo-a{stroke:var(--ink);stroke-width:2.5} .tchart .duo-ap{fill:var(--ink)}
+.tchart .duo-b{stroke:var(--red);stroke-width:2.5} .tchart .duo-bp{fill:var(--red)}
+.namesakes{margin-top:14px;font-size:14px;color:var(--muted)}
+
+/* graf účasti */
+.chart{width:100%;height:auto;display:block}
+.chart text{font-family:var(--body);fill:var(--muted);font-size:11px}
+.chart .axis{stroke:var(--line)}
+
+footer{background:var(--bar);color:var(--bar-muted);padding:28px 0 36px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between}
+footer .f-club{text-decoration:none;display:flex;align-items:center;gap:12px;color:#fff}
+footer .f-club img{width:40px;height:auto}
+footer .f-club b{font-family:var(--display);font-size:20px;display:block;line-height:1}
+.nets{background:var(--paper);text-align:center;padding:36px 16px 40px;border-top:1px solid var(--line)}
+.nets h2{font-family:var(--body);font-weight:700;font-size:20px;color:var(--red);margin:0 0 16px}
+.nets-icons{display:flex;justify-content:center;gap:18px}
+.nets-icons a{color:var(--red);display:inline-grid;place-items:center;width:48px;height:48px;border-radius:50%}
+.nets-icons a:hover{transform:translateY(-2px)}
+.nets-icons svg{width:40px;height:40px}
+.status{padding:40px 0;text-align:center;color:var(--muted)}
+.status.err{color:var(--red)}
+.lbl-short{display:none}
+@media (max-width:600px){
+  .sh-left{padding:14px 16px;gap:14px}
+  .sh-left img{width:56px}
+  .sh-left h1{font-size:36px}
+  .sh-left .club{font-size:18px}
+  .sh-right{padding:14px 16px 16px;gap:12px}
+  .motto{font-size:26px;max-width:none}
+  .social{gap:8px}
+  .social a{font-size:14px;padding:6px 12px 6px 9px}
+  .social .lbl-long{display:none} .social .lbl-short{display:inline}
+  nav.tabs .wrap{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);padding-right:28px}
+  nav.tabs button{font-size:17px;padding:12px 9px 10px}
+  .toolbar label{flex:1 1 140px}
+  .toolbar label:first-child{flex-basis:100%}
+  .toolbar select,.toolbar input[type=search]{width:100%;min-width:0}
+  .chart.tchart,.chart.hist{min-width:620px}
+  .next{gap:2px 12px;padding:12px 14px;margin-bottom:22px}
+  .next b{font-size:22px}
+  .facts{gap:6px 22px}
+  .facts b{font-size:30px}
+  .panel{padding:16px}
+  .predict b{font-size:34px}
+  .score b{font-size:60px}
+  table.res th,table.res td{padding:8px 9px}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}.dot:hover{transform:none}}
+</style>
+<style>
+/* ---------- stránka Fotky ---------- */
+nav.tabs a{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:.02em;color:var(--bar-muted);padding:12px 14px 10px;border-bottom:4px solid transparent;text-decoration:none;white-space:nowrap}
+nav.tabs a:hover{color:#fff}
+nav.tabs a[aria-current="page"]{color:#fff;border-bottom-color:var(--red)}
+.find{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 6px}
+.find input{flex:1 1 220px;font-size:20px;min-height:52px}
+.find .btn{min-height:52px;font-size:18px;padding-inline:22px}
+.hint{font-size:14px;color:var(--muted);margin:0}
+.picks{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.runner{margin-top:24px}
+.runner-head{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between}
+.runner-head h2{font-size:clamp(34px,6vw,54px);margin:0}
+.bibtag{display:inline-block;font-family:var(--display);font-weight:800;font-size:22px;background:var(--ink);color:var(--paper);padding:2px 10px;border-radius:4px;vertical-align:middle;margin-right:8px}
+.facts2{display:flex;flex-wrap:wrap;gap:6px 26px;margin:12px 0 0;padding:0;list-style:none}
+.facts2 li{color:var(--muted);font-size:15px}
+.facts2 b{display:block;font-family:var(--display);font-weight:800;font-size:30px;line-height:1.05;color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+.actions .btn{gap:8px}
+.actions svg{width:20px;height:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin-top:16px}
+@media (max-width:600px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}}
+.tile{position:relative;display:block;aspect-ratio:3/2;background:var(--line);border:0;padding:0;cursor:zoom-in;overflow:hidden}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
+.tile:hover img{transform:scale(1.04)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;font-size:12px;color:#fff;padding:12px 6px 4px;background:linear-gradient(transparent,rgba(0,0,0,.65));text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.note{background:var(--soft);border-left:6px solid var(--red);padding:12px 16px;margin-top:16px}
+.galhead{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:flex-end;justify-content:space-between}
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;color:#fff}
+dialog::backdrop{background:rgba(10,8,8,.92)}
+.lb{position:fixed;inset:0;background:rgba(10,8,8,.96);display:grid;grid-template-rows:auto 1fr auto;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;gap:10px}
+.lb-top .cap{font-size:15px;opacity:.9}
+.lb-img{display:grid;place-items:center;min-height:0;position:relative}
+.lb-img img{max-width:100vw;max-height:100%;object-fit:contain;display:block}
+.lb-bottom{display:flex;justify-content:center;gap:10px;padding:10px 12px 16px;flex-wrap:wrap}
+.lb .round{width:48px;height:48px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(0,0,0,.35);color:#fff;font-size:24px;cursor:pointer;display:grid;place-items:center;padding:0}
+.lb .prev,.lb .next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb .prev{left:10px} .lb .next{right:10px}
+.lb .btn{gap:8px}
+.lb .btn.ghost{color:#fff;border-color:#fff}
+/* diplom */
+.dp{position:fixed;inset:0;overflow:auto;background:var(--page);color:var(--ink);padding:16px}
+.dp-in{max-width:980px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
+@media (max-width:760px){.dp-in{grid-template-columns:1fr}}
+.dp canvas{width:100%;height:auto;display:block;background:#fff;box-shadow:0 2px 18px rgba(0,0,0,.18)}
+.dp-side h3{margin-top:18px}
+.dp-side h3:first-child{margin-top:0}
+.dp-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.dp-photos button{aspect-ratio:1;border:3px solid transparent;padding:0;background:var(--line);cursor:pointer;overflow:hidden}
+.dp-photos button[aria-pressed="true"]{border-color:var(--red)}
+.dp-photos img{width:100%;height:100%;object-fit:cover;display:block}
+.dp-close{position:sticky;top:0;display:flex;justify-content:flex-end;max-width:980px;margin:0 auto 8px}
+.spinner{display:inline-block;width:18px;height:18px;border:3px solid var(--line);border-top-color:var(--red);border-radius:50%;animation:spin 1s linear infinite;vertical-align:-3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:600px){nav.tabs a{font-size:17px;padding:12px 9px 10px}}
+</style>
+</head>
+<body>
+<header class="shield">
+  <div class="wrap">
+    <div class="sh-left">
+      <a class="logo-link" href="./" title="Výsledky závodů BK Ludgeřovice"><img src="logo.png" alt="Logo BK Ludgeřovice" width="160" height="211"></a>
+      <div>
+        <p class="club"><a href="https://www.bkludgerovice.cz/">BK Ludgeřovice</a></p>
+        <h1>Fotky a diplomy</h1>
+      </div>
+    </div>
+    <div class="sh-right">
+      <p class="motto">Od útlého mládí po aktivní stáří</p>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Sekce webu">
+  <div class="wrap">
+    <a href="./#prehled">Přehled</a>
+    <a href="./#vysledky">Výsledky</a>
+    <a href="./#bezci">Běžci</a>
+    <a href="fotky.html" aria-current="page">Fotky</a>
+    <a href="./#statistiky">Statistiky</a>
+    <a href="./#klub">Náš klub</a>
+  </div>
+</nav>
+<main class="wrap" id="main">
+  <div class="status" id="status">Načítám fotky…</div>
+  <section id="app" hidden>
+    <h2 id="race-title">Najdi své fotky</h2>
+    <p class="lead" id="race-lead"></p>
+    <div id="race-pick" class="chips" hidden></div>
+    <form class="find" id="find" role="search">
+      <label for="q" class="vh">Startovní číslo nebo jméno</label>
+      <input id="q" type="search" inputmode="search" autocomplete="off" placeholder="Startovní číslo nebo jméno">
+      <button class="btn" type="submit">Hledat</button>
+    </form>
+    <p class="hint">Zadej číslo ze svého startovního čísla, nebo část jména.</p>
+    <div id="picks" class="picks"></div>
+    <div id="runner" class="runner" hidden></div>
+    <section class="block" id="gallery">
+      <div class="galhead">
+        <div>
+          <h2>Všechny fotky</h2>
+          <p class="muted small" id="gal-info" style="margin:0"></p>
+        </div>
+      </div>
+      <div class="chips" id="gal-chips" style="margin-top:12px"></div>
+      <div class="grid" id="gal-grid"></div>
+      <div class="more" style="text-align:center"><button class="btn ghost" id="gal-more" hidden>Načíst další fotky</button></div>
+    </section>
+    <p class="muted small block" id="privacy">Nechceš tu svou fotku? Napiš nám přes <a href="https://www.facebook.com/BKLudgerovice/">Facebook klubu</a> a fotku skryjeme.</p>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <a class="f-club" href="https://www.bkludgerovice.cz/"><img src="logo.png" alt="" width="40" height="53"><div><b>BK Ludgeřovice</b><span>Od útlého mládí po aktivní stáří</span></div></a>
+    <div id="f-data"></div>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Fotka">
+  <div class="lb">
+    <div class="lb-top"><span class="cap" id="lb-cap"></span><button class="round" id="lb-close" aria-label="Zavřít">✕</button></div>
+    <div class="lb-img"><img id="lb-img" alt=""><button class="round prev" id="lb-prev" aria-label="Předchozí">‹</button><button class="round next" id="lb-next" aria-label="Další">›</button></div>
+    <div class="lb-bottom"><a class="btn" id="lb-down" target="_blank" rel="noopener">Stáhnout v plné velikosti</a><button class="btn ghost" id="lb-dip" hidden>Diplom s touto fotkou</button></div>
+  </div>
+</dialog>
+
+<dialog id="dp" aria-label="Můj diplom">
+  <div class="dp">
+    <div class="dp-close"><button class="btn ghost" id="dp-close">Zavřít</button></div>
+    <div class="dp-in">
+      <div><canvas id="dp-cv" width="1080" height="1350"></canvas></div>
+      <div class="dp-side">
+        <h3>Formát</h3>
+        <div class="chips" id="dp-format">
+          <button class="chip" data-f="post" aria-pressed="true">Příspěvek 4:5</button>
+          <button class="chip" data-f="story" aria-pressed="false">Příběh 9:16</button>
+        </div>
+        <h3>Fotka na diplomu</h3>
+        <div class="dp-photos" id="dp-photos"></div>
+        <p class="muted small" id="dp-photo-note"></p>
+        <div class="actions" style="margin-top:18px">
+          <button class="btn" id="dp-save"><span id="dp-save-l">Stáhnout / sdílet</span></button>
+        </div>
+        <p class="muted small" id="dp-msg"></p>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+'use strict';
+const $ = (s, el) => (el || document).querySelector(s);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
+const nameKey = (s) => norm(s).split(' ').filter(Boolean).sort().join(' ');
+const slug = (s) => norm(s).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const ICON_AWARD = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-4 12.7V22l4-2 4 2v-7.3A7 7 0 0 0 12 2zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2-.9 1.9-2.1.3 1.5 1.5-.3 2.1 1.8-1 1.9 1-.4-2.1 1.5-1.5-2.1-.3z"/></svg>';
+const ICON_LINK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.2c.5.5 1.2.8 2 .8a3 3 0 1 0-3-3c0 .2 0 .5.1.7L8 9.8A3 3 0 1 0 8 14.2l7.1 4.2c-.1.2-.1.4-.1.6a2.9 2.9 0 1 0 3-2.9z"/></svg>';
+
+// Obrázky z Google Disku (složky fotografů jsou nasdílené „kdokoli s odkazem“)
+const IMG = {
+  thumb: (id, w) => 'https://drive.google.com/thumbnail?id=' + encodeURIComponent(id) + '&sz=w' + w,
+  down: (id) => 'https://drive.google.com/uc?export=download&id=' + encodeURIComponent(id)
+};
+
+const S = { races: [], code: '', url: '', k: null, bib: {}, byName: {}, byBib: {}, tot: {}, cur: null, gal: { f: -1, n: 0, list: [] }, lb: { list: [], i: 0 } };
+const PAGE = 48;
+
+function toast(t) { let el = $('#toast'); if (!el) { el = document.createElement('div'); el.id = 'toast'; el.className = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); } el.textContent = t; el.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => { el.hidden = true; }, 2800); }
+const num = (s) => { const n = parseInt(String(s || ''), 10); return isFinite(n) ? n : null; };
+const fmtCas = (s) => String(s || '').replace(/^0{1,2}:(?=\d{2}:)/, '').replace(/^0(?=\d:)/, '');
+
+async function start() {
+  try {
+    const r = await fetch('data/zavody.json', { cache: 'no-cache' });
+    const cfg = r.ok ? await r.json() : {};
+    const f = cfg.fotky || {};
+    S.races = Object.keys(f).map((code) => ({ code, url: typeof f[code] === 'string' ? f[code] : (f[code] || {}).katalog, medaile: typeof f[code] === 'string' ? '' : (f[code] || {}).medaile || '' }))
+      .filter((x) => x.url && /^https:\/\//.test(x.url));
+    if (!S.races.length) throw new Error('Fotky zatím nejsou zveřejněné.');
+    const yr = (c) => Number((c.match(/\((\d{4})\)/) || [])[1] || 0);
+    S.races.sort((a, b) => yr(b.code) - yr(a.code));
+    const qp = new URLSearchParams(location.search);
+    const want = qp.get('z');
+    const race = S.races.find((x) => x.code === want) || S.races[0];
+    if (S.races.length > 1) {
+      $('#race-pick').hidden = false;
+      $('#race-pick').innerHTML = S.races.map((x) => '<button class="chip" data-race="' + esc(x.code) + '" aria-pressed="' + (x === race) + '">' + esc(x.code) + '</button>').join('');
+    }
+    await loadRace(race);
+    const c = qp.get('c'), j = qp.get('j');
+    if (c) { $('#q').value = c; search(c, false); }
+    else if (j) { $('#q').value = j; search(j, false); }
+    if (qp.get('diplom') && S.cur) openDiploma(S.cur);
+  } catch (e) {
+    const st = $('#status'); st.className = 'status err'; st.textContent = (e.message || e);
+    console.error(e);
+  }
+}
+
+async function loadRace(race) {
+  $('#status').hidden = false; $('#status').className = 'status'; $('#status').textContent = 'Načítám fotky…'; $('#app').hidden = true;
+  const r = await fetch(race.url, { cache: 'no-cache' });
+  if (!r.ok) throw new Error('Katalog fotek se nepodařilo načíst (' + r.status + ').');
+  const k = await r.json();
+  if (k.chyba) throw new Error('Katalog fotek hlásí chybu: ' + k.chyba);
+  S.code = race.code; S.url = race.url; S.medaile = race.medaile; S.k = k; S.bib = {}; S.byName = {}; S.byBib = {}; S.tot = {}; S.cur = null;
+  for (const b of k.bezci || []) {
+    S.bib[b.c] = b;
+    (S.byName[nameKey(b.j)] = S.byName[nameKey(b.j)] || []).push(b);
+    if (num(b.p)) S.tot[b.t] = (S.tot[b.t] || 0) + 1;
+    if (num(b.pk)) S.tot[b.t + '|' + b.k] = (S.tot[b.t + '|' + b.k] || 0) + 1;
+  }
+  for (const f of k.fotky || []) for (const c of f.c || []) (S.byBib[c] = S.byBib[c] || []).push(f);
+  const z = k.zavod || {};
+  document.title = 'Fotky – ' + (z.nazev || race.code) + ' – BK Ludgeřovice';
+  $('#race-title').textContent = z.nazev || race.code;
+  const prir = (k.fotky || []).filter((f) => f.c).length;
+  $('#race-lead').textContent = [z.datum, (k.fotky || []).length + ' fotek od ' + (k.fotografove || []).length + ' fotografů'].filter(Boolean).join(' · ') + '. Fotky přiřazujeme podle startovních čísel, takže tě najdeme jen tam, kde je číslo vidět.';
+  $('#f-data').textContent = prir + ' fotek s rozpoznaným číslem';
+  $('#runner').hidden = true; $('#picks').innerHTML = '';
+  S.gal.f = -1; drawGalleryChips(); resetGallery();
+  $('#status').hidden = true; $('#app').hidden = false;
+}
+
+// ---------- hledání ----------
+function search(q, push) {
+  q = String(q || '').trim(); $('#picks').innerHTML = '';
+  if (!q) return;
+  if (/^\d+$/.test(q)) {
+    const b = S.bib[Number(q)];
+    if (!b) { showNone('Startovní číslo ' + q + ' ve výsledcích nemáme. Zkontroluj číslo, nebo zkus jméno.'); return; }
+    showRunner(b, push); return;
+  }
+  const tok = norm(q).split(' ').filter(Boolean);
+  const hit = (S.k.bezci || []).filter((b) => { const n = norm(b.j); return tok.every((t) => n.split(' ').some((w) => w.startsWith(t))); });
+  if (!hit.length) { showNone('Nikoho jménem „' + q + '“ ve výsledcích nemáme. Zkus jen příjmení nebo startovní číslo.'); return; }
+  if (hit.length === 1) { showRunner(hit[0], push); return; }
+  $('#runner').hidden = true;
+  $('#picks').innerHTML = hit.slice(0, 30).map((b) => '<button class="chip" data-bib="' + b.c + '">' + esc(b.j) + ' <small>č. ' + b.c + (b.t ? ', ' + esc(b.t) : '') + '</small></button>').join('') +
+    (hit.length > 30 ? '<span class="muted small">… a dalších ' + (hit.length - 30) + '. Upřesni hledání.</span>' : '');
+}
+function showNone(t) { S.cur = null; $('#runner').hidden = false; $('#runner').innerHTML = '<div class="note">' + esc(t) + '</div>'; }
+
+function placeLines(b) {
+  const out = [];
+  if (b.s && /dns|dnf|dsq/i.test(b.s)) return out;
+  const p = num(b.p), pk = num(b.pk);
+  if (p) out.push([p + '.', 'místo celkově' + (S.tot[b.t] ? ' z ' + S.tot[b.t] : '')]);
+  if (pk && b.k) out.push([pk + '.', 'v kategorii ' + b.k + (S.tot[b.t + '|' + b.k] ? ' z ' + S.tot[b.t + '|' + b.k] : '')]);
+  return out;
+}
+const canDiploma = (b) => !(b.s && /dns|dnf|dsq/i.test(b.s));
+
+function showRunner(b, push) {
+  S.cur = b;
+  const photos = S.byBib[b.c] || [];
+  const facts = [];
+  if (b.cas) facts.push('<li><b class="num">' + esc(fmtCas(b.cas)) + '</b>čas</li>');
+  placeLines(b).forEach(([a, t]) => facts.push('<li><b>' + esc(a) + '</b>' + esc(t) + '</li>'));
+  if (b.s) facts.push('<li><b>' + esc(b.s) + '</b>status</li>');
+  let h = '<div class="runner-head"><div><p class="muted" style="margin:0 0 4px"><span class="bibtag">' + b.c + '</span>' + esc([b.t, b.o].filter(Boolean).join(' · ')) + '</p><h2>' + esc(b.j) + '</h2></div>' +
+    '<div class="actions">' + (canDiploma(b) ? '<button class="btn" id="btn-dip">' + ICON_AWARD + 'Můj diplom</button>' : '') +
+    '<button class="btn ghost" id="btn-share">' + ICON_LINK + 'Sdílet odkaz</button></div></div>';
+  if (facts.length) h += '<ul class="facts2">' + facts.join('') + '</ul>';
+  if (photos.length) h += '<h3 style="margin-top:22px">' + photos.length + ' ' + (photos.length === 1 ? 'fotka' : photos.length < 5 ? 'fotky' : 'fotek') + '</h3><div class="grid" id="r-grid">' + photos.map((f, i) => tile(f, i, 'r')).join('') + '</div>';
+  else h += '<div class="note">Zatím jsme pro tebe nenašli žádnou fotku podle čísla. Projdi galerii níž, na fotkách, kde číslo není vidět, můžeš být taky.</div>';
+  $('#runner').innerHTML = h; $('#runner').hidden = false;
+  const u = new URL(location.href); u.searchParams.set('z', S.code); u.searchParams.set('c', b.c); u.searchParams.delete('j'); u.searchParams.delete('diplom');
+  try { history[push ? 'pushState' : 'replaceState'](null, '', u.pathname + u.search); } catch (e) {}
+  if (push) $('#runner').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function tile(f, i, list) {
+  const fot = (S.k.fotografove || [])[f.f] || '';
+  return '<button class="tile" data-list="' + list + '" data-i="' + i + '" aria-label="Otevřít fotku' + (fot ? ' – ' + esc(fot) : '') + '"><img loading="lazy" decoding="async" src="' + IMG.thumb(f.id, 400) + '" alt=""><span class="cap">' + esc(fot) + '</span></button>';
+}
+
+// ---------- galerie ----------
+function drawGalleryChips() {
+  const k = S.k, cnt = {};
+  (k.fotky || []).forEach((f) => { cnt[f.f] = (cnt[f.f] || 0) + 1; });
+  $('#gal-chips').innerHTML = '<button class="chip" data-gf="-1" aria-pressed="' + (S.gal.f === -1) + '">Všichni<small>' + (k.fotky || []).length + '</small></button>' +
+    (k.fotografove || []).map((n, i) => '<button class="chip" data-gf="' + i + '" aria-pressed="' + (S.gal.f === i) + '">' + esc(n) + '<small>' + (cnt[i] || 0) + '</small></button>').join('');
+}
+function resetGallery() {
+  S.gal.list = (S.k.fotky || []).filter((f) => S.gal.f < 0 || f.f === S.gal.f);
+  S.gal.n = 0; $('#gal-grid').innerHTML = ''; moreGallery();
+  $('#gal-info').textContent = 'Seřazeno podle fotografa a pořadí snímků. Klikni na fotku pro zvětšení a stažení.';
+}
+function moreGallery() {
+  const from = S.gal.n, to = Math.min(S.gal.list.length, from + PAGE);
+  $('#gal-grid').insertAdjacentHTML('beforeend', S.gal.list.slice(from, to).map((f, j) => tile(f, from + j, 'g')).join(''));
+  S.gal.n = to; $('#gal-more').hidden = to >= S.gal.list.length;
+}
+
+// ---------- lightbox ----------
+function openLb(list, i) {
+  S.lb.list = list; S.lb.i = i; drawLb();
+  const d = $('#lb'); if (!d.open) d.showModal();
+}
+function drawLb() {
+  const f = S.lb.list[S.lb.i]; if (!f) return;
+  const fot = (S.k.fotografove || [])[f.f] || '';
+  $('#lb-img').src = IMG.thumb(f.id, 1600);
+  $('#lb-img').alt = 'Fotka ' + (S.lb.i + 1) + ' z ' + S.lb.list.length;
+  const names = (f.c || []).map((c) => S.bib[c] ? S.bib[c].j : '').filter(Boolean);
+  $('#lb-cap').textContent = (S.lb.i + 1) + ' / ' + S.lb.list.length + (fot ? ' · Foto: ' + fot : '') + (names.length ? ' · ' + names.join(', ') : '');
+  $('#lb-down').href = IMG.down(f.id);
+  $('#lb-prev').hidden = S.lb.i <= 0; $('#lb-next').hidden = S.lb.i >= S.lb.list.length - 1;
+  $('#lb-dip').hidden = !(S.cur && (f.c || []).includes(S.cur.c) && canDiploma(S.cur));
+  const nx = S.lb.list[S.lb.i + 1]; if (nx) { const im = new Image(); im.src = IMG.thumb(nx.id, 1600); }
+}
+function stepLb(d) { const n = S.lb.i + d; if (n >= 0 && n < S.lb.list.length) { S.lb.i = n; drawLb(); } }
+
+// ---------- diplom ----------
+const DP = { b: null, fmt: 'post', photo: null, cache: {} };
+const CARD = { RED: '#c71720', INK: '#1b1918', MUT: '#6b6361', DC: '"Barlow Condensed","Arial Narrow",Arial,sans-serif', BD: '"Barlow",Arial,sans-serif' };
+
+function openDiploma(b, photoId) {
+  if (!canDiploma(b)) return;
+  DP.b = b;
+  const own = S.byBib[b.c] || [];
+  DP.photo = photoId || (own[0] && own[0].id) || S.k.obecna || null;
+  const opts = own.slice(0, 16).map((f) => f.id);
+  if (S.k.obecna && !opts.includes(S.k.obecna)) opts.push(S.k.obecna);
+  $('#dp-photos').innerHTML = opts.map((id) => '<button data-ph="' + esc(id) + '" aria-pressed="' + (id === DP.photo) + '" aria-label="Vybrat fotku"><img src="' + IMG.thumb(id, 200) + '" alt="" loading="lazy"></button>').join('') +
+    '<button data-ph="" aria-pressed="' + (!DP.photo) + '" aria-label="Bez fotky" style="font-weight:700;color:var(--muted)">bez<br>fotky</button>';
+  $('#dp-photo-note').textContent = own.length ? '' : (S.k.obecna ? 'Tvou fotku podle čísla jsme nenašli, na diplomu je fotka ze závodu.' : 'Tvou fotku podle čísla jsme nenašli.');
+  const d = $('#dp'); if (!d.open) d.showModal();
+  drawDiploma();
+}
+
+async function photoImg(id) {
+  if (!id) return null;
+  if (!DP.cache[id]) {
+    DP.cache[id] = (async () => {
+      const r = await fetch(S.url + (S.url.includes('?') ? '&' : '?') + 'img=' + encodeURIComponent(id) + '&s=1400');
+      const j = await r.json();
+      if (!j.ok) throw new Error(j.chyba || 'fotka se nenačetla');
+      const im = new Image(); im.src = 'data:' + j.mime + ';base64,' + j.b64; await im.decode(); return im;
+    })().catch((e) => { delete DP.cache[id]; throw e; });
+  }
+  return DP.cache[id];
+}
+const medCache = {};
+function medal(src) {
+  if (!src) return Promise.resolve(null);
+  if (!medCache[src]) medCache[src] = new Promise((ok) => { const im = new Image(); im.onload = () => ok(im); im.onerror = () => ok(null); im.src = src; });
+  return medCache[src];
+}
+let logoImg = null;
+async function logo() { if (!logoImg) { logoImg = new Image(); logoImg.src = 'logo.png'; await logoImg.decode().catch(() => {}); } return logoImg; }
+
+let drawSeq = 0;
+async function drawDiploma() {
+  const seq = ++drawSeq; const b = DP.b; if (!b) return;
+  $('#dp-msg').innerHTML = DP.photo ? '<span class="spinner"></span> Načítám fotku…' : '';
+  try { await Promise.all(['800 64px "Barlow Condensed"', 'italic 800 64px "Barlow Condensed"', '600 32px "Barlow"', '500 32px "Barlow"'].map((f) => document.fonts.load(f))); } catch (e) {}
+  let img = null;
+  try { img = await photoImg(DP.photo); } catch (e) { $('#dp-msg').textContent = 'Fotku se nepodařilo načíst, diplom je bez ní.'; }
+  if (seq !== drawSeq) return;
+  const lg = await logo();
+  const med = await medal(S.medaile);
+  const W = 1080, H = DP.fmt === 'story' ? 1920 : 1350;
+  const cv = $('#dp-cv'); cv.width = W; cv.height = H; const g = cv.getContext('2d');
+  const { RED, INK, MUT, DC, BD } = CARD;
+  const fit = (txt, font, size, maxW, min) => { let s = size; do { g.font = font.replace('#', s); s -= 2; } while (g.measureText(txt).width > maxW && s > (min || 20)); };
+  const z = S.k.zavod || {};
+
+  // pozadí
+  g.fillStyle = '#fff'; g.fillRect(0, 0, W, H);
+  // horní štít (bílá | červená)
+  const top = DP.fmt === 'story' ? 230 : 170;
+  g.fillStyle = RED; g.fillRect(W / 2, 0, W / 2, top);
+  let tx = 165;
+  if (lg && lg.naturalWidth) { const lh = Math.min(top - 40, 140), lw = lh * lg.naturalWidth / lg.naturalHeight; g.drawImage(lg, 50, (top - lh) / 2, lw, lh); tx = 50 + lw + 22; }
+  g.fillStyle = RED; g.font = '800 40px ' + DC; g.fillText('BK Ludgeřovice', tx, top / 2 - 6);
+  g.fillStyle = INK; g.font = '800 54px ' + DC; g.fillText('DIPLOM', tx, top / 2 + 48);
+  g.fillStyle = '#fff'; g.font = 'italic 800 46px ' + DC;
+  const motto = ['Od útlého mládí', 'po aktivní stáří']; motto.forEach((t, i) => g.fillText(t, W / 2 + 40, top / 2 - 8 + i * 50));
+
+  // fotka
+  const ph0 = top, ph1 = DP.fmt === 'story' ? 1080 : 640;
+  if (img) {
+    const r = Math.max(W / img.naturalWidth, (ph1 - ph0) / img.naturalHeight);
+    const iw = img.naturalWidth * r, ih = img.naturalHeight * r;
+    g.save(); g.beginPath(); g.rect(0, ph0, W, ph1 - ph0); g.clip();
+    g.drawImage(img, (W - iw) / 2, ph0 + (ph1 - ph0 - ih) * 0.35, iw, ih);
+    const gr = g.createLinearGradient(0, ph1 - 220, 0, ph1); gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(1, 'rgba(0,0,0,.55)');
+    g.fillStyle = gr; g.fillRect(0, ph1 - 220, W, 220); g.restore();
+    const f = (S.k.fotky || []).find((x) => x.id === DP.photo); const fot = f ? (S.k.fotografove || [])[f.f] : '';
+    if (fot) { g.fillStyle = 'rgba(255,255,255,.9)'; g.font = '500 26px ' + BD; g.fillText('Foto: ' + fot, 50, ph1 - 28); }
+  } else {
+    g.fillStyle = INK; g.fillRect(0, ph0, W, ph1 - ph0);
+    g.strokeStyle = 'rgba(255,255,255,.07)'; g.lineWidth = 26;
+    for (let x = -H; x < W + H; x += 70) { g.beginPath(); g.moveTo(x, ph1); g.lineTo(x + (ph1 - ph0), ph0); g.stroke(); }
+    g.fillStyle = '#fff'; fit(z.nazev || S.code, '800 #px ' + DC, 120, W - 100); g.fillText(z.nazev || S.code, 50, (ph0 + ph1) / 2 + 40);
+  }
+  // startovní číslo jako „bib“
+  const bw = 230, bh = 130, bx = W - bw - 50, by = ph1 - bh / 2 - 20;
+  g.fillStyle = '#fff'; g.shadowColor = 'rgba(0,0,0,.25)'; g.shadowBlur = 18; g.fillRect(bx, by, bw, bh); g.shadowBlur = 0;
+  g.fillStyle = RED; g.fillRect(bx, by, bw, 26);
+  g.fillStyle = '#fff'; g.font = '700 18px ' + BD; g.textAlign = 'center'; g.fillText('STARTOVNÍ ČÍSLO', bx + bw / 2, by + 19);
+  g.fillStyle = INK; fit(String(b.c), '800 #px ' + DC, 100, bw - 30); g.fillText(String(b.c), bx + bw / 2, by + bh - 14); g.textAlign = 'left';
+
+  // medaile vpravo v textové části
+  const st = DP.fmt === 'story';
+  const mS = st ? 400 : 330, mX = W - 40 - mS, mY = ph1 + (st ? 230 : 120);
+  const tW = med ? mX - 60 : W - 100;          // šířka textu vedle medaile
+  if (med) {
+    g.save(); g.shadowColor = 'rgba(0,0,0,.28)'; g.shadowBlur = 24; g.shadowOffsetY = 8;
+    g.drawImage(med, mX, mY, mS, mS * med.naturalHeight / med.naturalWidth); g.restore();
+  }
+  // text
+  let y = ph1 + (st ? 110 : 80);
+  g.fillStyle = RED; fit(z.nazev || S.code, '800 #px ' + DC, 60, W - 100 - (bw - 20)); g.fillText(z.nazev || S.code, 50, y);
+  y += 44; g.fillStyle = MUT; g.font = '500 32px ' + BD; g.fillText([b.t, z.datum].filter(Boolean).join(' · '), 50, y);
+  y += st ? 130 : 105; g.fillStyle = INK; fit(b.j, '800 #px ' + DC, 104, tW, 40); g.fillText(b.j, 50, y);
+  const cas = fmtCas(b.cas);
+  if (cas) { y += st ? 210 : 172; g.fillStyle = INK; fit(cas, '800 #px ' + DC, st ? 200 : 180, tW); g.fillText(cas, 44, y); }
+  const lines = placeLines(b).map(([a, t]) => a + ' ' + t);
+  if (b.s && !lines.length) lines.push(b.s);
+  y += st ? 90 : 78;
+  lines.forEach((t, i) => { g.fillStyle = i ? INK : RED; fit(t, (i ? '500' : '700') + ' #px ' + BD, 40, tW, 26); g.fillText(t, 50, y + i * 56); });
+
+  // patička
+  g.fillStyle = RED; g.fillRect(0, H - 96, W, 96);
+  g.fillStyle = '#fff'; g.font = '600 36px ' + BD; g.fillText('vysledky.bkludgerovice.cz', 50, H - 36);
+  g.textAlign = 'right'; g.font = 'italic 800 40px ' + DC; g.fillText('Díky, že jsi s námi!', W - 50, H - 36); g.textAlign = 'left';
+  if (seq === drawSeq && (!DP.photo || img)) $('#dp-msg').textContent = '';
+}
+
+async function saveDiploma() {
+  const cv = $('#dp-cv'), b = DP.b;
+  const blob = await new Promise((ok) => cv.toBlob(ok, 'image/png'));
+  const name = 'diplom-' + slug(b.j) + '-' + slug(S.code) + (DP.fmt === 'story' ? '-pribeh' : '') + '.png';
+  const file = new File([blob], name, { type: 'image/png' });
+  if (navigator.canShare && navigator.canShare({ files: [file] })) { try { await navigator.share({ files: [file], title: 'Můj diplom – ' + ((S.k.zavod || {}).nazev || '') }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000); toast('Diplom je stažený, přidej ho do příspěvku nebo příběhu.');
+}
+
+// ---------- události ----------
+$('#find').addEventListener('submit', (e) => { e.preventDefault(); search($('#q').value, true); });
+document.addEventListener('click', async (e) => {
+  const t = e.target;
+  const pick = t.closest('[data-bib]'); if (pick) { showRunner(S.bib[pick.dataset.bib], true); $('#picks').innerHTML = ''; return; }
+  const race = t.closest('[data-race]'); if (race) { document.querySelectorAll('[data-race]').forEach((x) => x.setAttribute('aria-pressed', String(x === race))); const r = S.races.find((x) => x.code === race.dataset.race); try { await loadRace(r); } catch (err) { toast(err.message); } return; }
+  const tl = t.closest('.tile'); if (tl) { openLb(tl.dataset.list === 'r' ? S.byBib[S.cur.c] : S.gal.list, Number(tl.dataset.i)); return; }
+  const gf = t.closest('[data-gf]'); if (gf) { S.gal.f = Number(gf.dataset.gf); drawGalleryChips(); resetGallery(); return; }
+  if (t.closest('#gal-more')) { moreGallery(); return; }
+  if (t.closest('#btn-dip')) { openDiploma(S.cur); return; }
+  if (t.closest('#btn-share')) {
+    const url = location.href;
+    if (navigator.share) { try { await navigator.share({ title: S.cur.j + ' – fotky', url }); return; } catch (err) { if (err && err.name === 'AbortError') return; } }
+    try { await navigator.clipboard.writeText(url); toast('Odkaz je zkopírovaný.'); } catch (err) { toast(url); }
+    return;
+  }
+  if (t.closest('#lb-close')) { $('#lb').close(); return; }
+  if (t.closest('#lb-prev')) { stepLb(-1); return; }
+  if (t.closest('#lb-next')) { stepLb(1); return; }
+  if (t.closest('#lb-dip')) { const f = S.lb.list[S.lb.i]; $('#lb').close(); openDiploma(S.cur, f.id); return; }
+  if (t.closest('#dp-close')) { $('#dp').close(); return; }
+  const fm = t.closest('[data-f]'); if (fm) { DP.fmt = fm.dataset.f; document.querySelectorAll('[data-f]').forEach((x) => x.setAttribute('aria-pressed', String(x === fm))); drawDiploma(); return; }
+  const ph = t.closest('[data-ph]'); if (ph) { DP.photo = ph.dataset.ph || null; document.querySelectorAll('[data-ph]').forEach((x) => x.setAttribute('aria-pressed', String(x === ph))); drawDiploma(); return; }
+  if (t.closest('#dp-save')) { saveDiploma(); return; }
+  if (t === $('#lb') || t.classList.contains('lb-img')) $('#lb').close();
+});
+document.addEventListener('keydown', (e) => {
+  if (!$('#lb').open) return;
+  if (e.key === 'ArrowLeft') stepLb(-1);
+  if (e.key === 'ArrowRight') stepLb(1);
+});
+let tx = null;
+$('#lb').addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
+$('#lb').addEventListener('touchend', (e) => { if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) stepLb(dx < 0 ? 1 : -1); tx = null; });
+window.addEventListener('popstate', () => { const qp = new URLSearchParams(location.search); const c = qp.get('c'); if (c && S.bib[c]) showRunner(S.bib[c], false); });
+
+start();
+})();
+</script>
+</body>
+</html>
