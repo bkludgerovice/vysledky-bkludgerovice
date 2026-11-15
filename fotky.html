@@ -416,6 +416,7 @@ const PAGE = 48;
 
 function toast(t) { let el = $('#toast'); if (!el) { el = document.createElement('div'); el.id = 'toast'; el.className = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); } el.textContent = t; el.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => { el.hidden = true; }, 2800); }
 const num = (s) => { const n = parseInt(String(s || ''), 10); return isFinite(n) ? n : null; };
+const bn = (b) => b.n || b.c;   // startovní číslo k zobrazení (ID dětí je „D64“, na čísle je 64)
 const fmtCas = (s) => String(s || '').replace(/^0{1,2}:(?=\d{2}:)/, '').replace(/^0(?=\d:)/, '');
 
 async function start() {
@@ -437,7 +438,13 @@ async function start() {
     }
     await loadRace(race);
     const c = qp.get('c'), j = qp.get('j');
-    if (c) { $('#q').value = c; search(c, false); }
+    if (c && c.includes(',')) {
+      // víc závodníků z jednoho e-mailu (rodina) – nabídnout výběr
+      const list = c.split(',').map((x) => x.trim().toUpperCase()).filter((x) => S.bib[x]);
+      if (list.length === 1) showRunner(S.bib[list[0]], false);
+      else if (list.length) $('#picks').innerHTML = '<p class="hint" style="flex-basis:100%">Vyber závodníka:</p>' + list.map((n) => { const b = S.bib[n]; return '<button class="chip" data-bib="' + esc(b.c) + '">' + esc(b.j) + ' <small>č. ' + bn(b) + (b.t ? ', ' + esc(b.t) : '') + '</small></button>'; }).join('');
+    }
+    else if (c) { $('#q').value = c; search(c, false); }
     else if (j) { $('#q').value = j; search(j, false); }
     if (qp.get('diplom') && S.cur) openDiploma(S.cur);
   } catch (e) {
@@ -454,11 +461,13 @@ async function loadRace(race) {
   if (k.chyba) throw new Error('Katalog fotek hlásí chybu: ' + k.chyba);
   S.code = race.code; S.url = race.url; S.medaile = race.medaile; S.k = k; S.bib = {}; S.byName = {}; S.byBib = {}; S.tot = {}; S.cur = null;
   for (const b of k.bezci || []) {
+    b.c = String(b.c); if (!b.n) b.n = Number(b.c.replace(/^D/, ''));
     S.bib[b.c] = b;
     (S.byName[nameKey(b.j)] = S.byName[nameKey(b.j)] || []).push(b);
     if (num(b.p)) S.tot[b.t] = (S.tot[b.t] || 0) + 1;
     if (num(b.pk)) S.tot[b.t + '|' + b.k] = (S.tot[b.t + '|' + b.k] || 0) + 1;
   }
+  for (const f of k.fotky || []) { if (f.c) f.c = f.c.map(String); }
   for (const f of k.fotky || []) for (const c of f.c || []) (S.byBib[c] = S.byBib[c] || []).push(f);
   const z = k.zavod || {};
   document.title = 'Fotky – ' + (z.nazev || race.code) + ' – BK Ludgeřovice';
@@ -475,17 +484,22 @@ async function loadRace(race) {
 function search(q, push) {
   q = String(q || '').trim(); $('#picks').innerHTML = '';
   if (!q) return;
-  if (/^\d+$/.test(q)) {
-    const b = S.bib[Number(q)];
-    if (!b) { showNone('Startovní číslo ' + q + ' ve výsledcích nemáme. Zkontroluj číslo, nebo zkus jméno.'); return; }
-    showRunner(b, push); return;
+  if (/^[dD]?\d+$/.test(q)) {
+    // stejné číslo můžou mít dospělý i dítě (dětské tratě mají vlastní řadu) → nabídnout oba
+    const hit = /^[dD]/.test(q) ? [S.bib['D' + Number(q.slice(1))]].filter(Boolean) : (S.k.bezci || []).filter((b) => b.n === Number(q));
+    if (!hit.length) { showNone('Startovní číslo ' + q + ' ve výsledcích nemáme. Zkontroluj číslo, nebo zkus jméno.'); return; }
+    if (hit.length === 1) { showRunner(hit[0], push); return; }
+    $('#runner').hidden = true;
+    $('#picks').innerHTML = '<p class="hint" style="flex-basis:100%">Číslo ' + Number(q) + ' měl dospělý i dětský závodník. Vyber:</p>' +
+      hit.map((b) => '<button class="chip" data-bib="' + esc(b.c) + '">' + esc(b.j) + ' <small>' + esc(b.t || '') + '</small></button>').join('');
+    return;
   }
   const tok = norm(q).split(' ').filter(Boolean);
   const hit = (S.k.bezci || []).filter((b) => { const n = norm(b.j); return tok.every((t) => n.split(' ').some((w) => w.startsWith(t))); });
   if (!hit.length) { showNone('Nikoho jménem „' + q + '“ ve výsledcích nemáme. Zkus jen příjmení nebo startovní číslo.'); return; }
   if (hit.length === 1) { showRunner(hit[0], push); return; }
   $('#runner').hidden = true;
-  $('#picks').innerHTML = hit.slice(0, 30).map((b) => '<button class="chip" data-bib="' + b.c + '">' + esc(b.j) + ' <small>č. ' + b.c + (b.t ? ', ' + esc(b.t) : '') + '</small></button>').join('') +
+  $('#picks').innerHTML = hit.slice(0, 30).map((b) => '<button class="chip" data-bib="' + esc(b.c) + '">' + esc(b.j) + ' <small>č. ' + bn(b) + (b.t ? ', ' + esc(b.t) : '') + '</small></button>').join('') +
     (hit.length > 30 ? '<span class="muted small">… a dalších ' + (hit.length - 30) + '. Upřesni hledání.</span>' : '');
 }
 function showNone(t) { S.cur = null; $('#runner').hidden = false; $('#runner').innerHTML = '<div class="note">' + esc(t) + '</div>'; }
@@ -507,7 +521,7 @@ function showRunner(b, push) {
   if (b.cas) facts.push('<li><b class="num">' + esc(fmtCas(b.cas)) + '</b>čas</li>');
   placeLines(b).forEach(([a, t]) => facts.push('<li><b>' + esc(a) + '</b>' + esc(t) + '</li>'));
   if (b.s) facts.push('<li><b>' + esc(b.s) + '</b>status</li>');
-  let h = '<div class="runner-head"><div><p class="muted" style="margin:0 0 4px"><span class="bibtag">' + b.c + '</span>' + esc([b.t, b.o].filter(Boolean).join(' · ')) + '</p><h2>' + esc(b.j) + '</h2></div>' +
+  let h = '<div class="runner-head"><div><p class="muted" style="margin:0 0 4px"><span class="bibtag">' + bn(b) + '</span>' + esc([b.t, b.o].filter(Boolean).join(' · ')) + '</p><h2>' + esc(b.j) + '</h2></div>' +
     '<div class="actions">' + (canDiploma(b) ? '<button class="btn" id="btn-dip">' + ICON_AWARD + 'Můj diplom</button>' : '') +
     '<button class="btn ghost" id="btn-share">' + ICON_LINK + 'Sdílet odkaz</button></div></div>';
   if (facts.length) h += '<ul class="facts2">' + facts.join('') + '</ul>';
@@ -650,7 +664,7 @@ async function drawDiploma() {
   g.fillStyle = '#fff'; g.shadowColor = 'rgba(0,0,0,.25)'; g.shadowBlur = 18; g.fillRect(bx, by, bw, bh); g.shadowBlur = 0;
   g.fillStyle = RED; g.fillRect(bx, by, bw, 26);
   g.fillStyle = '#fff'; g.font = '700 18px ' + BD; g.textAlign = 'center'; g.fillText('STARTOVNÍ ČÍSLO', bx + bw / 2, by + 19);
-  g.fillStyle = INK; fit(String(b.c), '800 #px ' + DC, 100, bw - 30); g.fillText(String(b.c), bx + bw / 2, by + bh - 14); g.textAlign = 'left';
+  g.fillStyle = INK; fit(String(bn(b)), '800 #px ' + DC, 100, bw - 30); g.fillText(String(bn(b)), bx + bw / 2, by + bh - 14); g.textAlign = 'left';
 
   // medaile vpravo v textové části
   const st = DP.fmt === 'story';
@@ -723,7 +737,7 @@ document.addEventListener('keydown', (e) => {
 let tx = null;
 $('#lb').addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
 $('#lb').addEventListener('touchend', (e) => { if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) stepLb(dx < 0 ? 1 : -1); tx = null; });
-window.addEventListener('popstate', () => { const qp = new URLSearchParams(location.search); const c = qp.get('c'); if (c && S.bib[c]) showRunner(S.bib[c], false); });
+window.addEventListener('popstate', () => { const qp = new URLSearchParams(location.search); const c = String(qp.get('c') || '').toUpperCase(); if (c && S.bib[c]) showRunner(S.bib[c], false); });
 
 start();
 })();
