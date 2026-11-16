@@ -299,6 +299,13 @@ dialog::backdrop{background:rgba(10,8,8,.92)}
 .dp-photos button{aspect-ratio:1;border:3px solid transparent;padding:0;background:var(--line);cursor:pointer;overflow:hidden}
 .dp-photos button[aria-pressed="true"]{border-color:var(--red)}
 .dp-photos img{width:100%;height:100%;object-fit:cover;display:block}
+.dp-cvw{position:relative}
+#dp-drag{position:absolute;left:0;right:0;cursor:grab;touch-action:none}
+#dp-drag.on{cursor:grabbing;outline:3px dashed rgba(255,255,255,.8);outline-offset:-6px}
+.dp-zoom{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600}
+.dp-zoom input{flex:1}
+.dp-nudge{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.dp-nudge .btn{padding:6px 12px;min-height:0}
 .dp-close{position:sticky;top:0;display:flex;justify-content:flex-end;max-width:980px;margin:0 auto 8px}
 .spinner{display:inline-block;width:18px;height:18px;border:3px solid var(--line);border-top-color:var(--red);border-radius:50%;animation:spin 1s linear infinite;vertical-align:-3px}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -378,7 +385,7 @@ dialog::backdrop{background:rgba(10,8,8,.92)}
   <div class="dp">
     <div class="dp-close"><button class="btn ghost" id="dp-close">Zavřít</button></div>
     <div class="dp-in">
-      <div><canvas id="dp-cv" width="1080" height="1350"></canvas></div>
+      <div class="dp-cvw"><canvas id="dp-cv" width="1080" height="1350"></canvas><div id="dp-drag" hidden title="Táhni pro posunutí fotky"></div></div>
       <div class="dp-side">
         <h3>Formát</h3>
         <div class="chips" id="dp-format">
@@ -388,6 +395,11 @@ dialog::backdrop{background:rgba(10,8,8,.92)}
         <h3>Fotka na diplomu</h3>
         <div class="dp-photos" id="dp-photos"></div>
         <p class="muted small" id="dp-photo-note"></p>
+        <div id="dp-adj" hidden>
+          <p class="muted small" style="margin:10px 0 6px">✋ Fotku na diplomu posuneš tažením prstem nebo myší.</p>
+          <label class="dp-zoom"><span>Přiblížení</span><input type="range" id="dp-zoom" min="1" max="2.5" step="0.05" value="1"></label>
+          <div class="dp-nudge"><button class="btn ghost" data-mv="0,-1" aria-label="Fotku nahoru">▲</button><button class="btn ghost" data-mv="0,1" aria-label="Fotku dolů">▼</button><button class="btn ghost" data-mv="-1,0" aria-label="Fotku doleva">◀</button><button class="btn ghost" data-mv="1,0" aria-label="Fotku doprava">▶</button><button class="btn ghost" id="dp-reset">Výchozí</button></div>
+        </div>
         <div class="actions" style="margin-top:18px">
           <button class="btn" id="dp-save">Stáhnout obrázek</button>
           <button class="btn ghost" id="dp-share" hidden>Sdílet (Instagram, Facebook…)</button>
@@ -591,7 +603,18 @@ function drawLb() {
 function stepLb(d) { const n = S.lb.i + d; if (n >= 0 && n < S.lb.list.length) { S.lb.i = n; drawLb(); } }
 
 // ---------- diplom ----------
-const DP = { b: null, fmt: 'post', photo: null, cache: {} };
+const DP = { b: null, fmt: 'post', photo: null, cache: {}, pos: {}, geo: null };
+const posKey = () => (DP.photo || '') + '|' + DP.fmt;
+function getPos() { return DP.pos[posKey()] || (DP.pos[posKey()] = { x: 0.5, y: 0.35, z: 1 }); }
+function syncAdj() { $('#dp-zoom').value = String(getPos().z); }
+let rafPend = false;
+function redrawSoon() { if (rafPend) return; rafPend = true; requestAnimationFrame(() => { rafPend = false; drawDiploma(); }); }
+function movePhoto(dxCanvas, dyCanvas) {
+  const G = DP.geo; if (!G) return; const p = getPos();
+  if (G.iw > G.w) p.x = Math.min(1, Math.max(0, p.x - dxCanvas / (G.iw - G.w)));
+  if (G.ih > G.h) p.y = Math.min(1, Math.max(0, p.y - dyCanvas / (G.ih - G.h)));
+  redrawSoon();
+}
 const CARD = { RED: '#c71720', INK: '#1b1918', MUT: '#6b6361', DC: '"Barlow Condensed","Arial Narrow",Arial,sans-serif', BD: '"Barlow",Arial,sans-serif' };
 
 function openDiploma(b, photoId) {
@@ -634,7 +657,7 @@ async function logo() { if (!logoImg) { logoImg = new Image(); logoImg.src = 'lo
 let drawSeq = 0;
 async function drawDiploma() {
   const seq = ++drawSeq; const b = DP.b; if (!b) return;
-  $('#dp-msg').innerHTML = DP.photo ? '<span class="spinner"></span> Načítám fotku…' : '';
+  $('#dp-msg').innerHTML = DP.photo && !DP.cache[DP.photo] ? '<span class="spinner"></span> Načítám fotku…' : '';
   try { await Promise.all(['800 64px "Barlow Condensed"', 'italic 800 64px "Barlow Condensed"', '600 32px "Barlow"', '500 32px "Barlow"'].map((f) => document.fonts.load(f))); } catch (e) {}
   let img = null;
   try { img = await photoImg(DP.photo); } catch (e) { $('#dp-msg').textContent = 'Fotku se nepodařilo načíst, diplom je bez ní.'; }
@@ -661,11 +684,15 @@ async function drawDiploma() {
 
   // fotka
   const ph0 = top, ph1 = DP.fmt === 'story' ? 1080 : 640;
+  const dg = $('#dp-drag'); dg.style.top = (ph0 / H * 100) + '%'; dg.style.height = ((ph1 - ph0) / H * 100) + '%';
+  dg.hidden = !img; $('#dp-adj').hidden = !img; if (!img) DP.geo = null; syncAdj();
   if (img) {
-    const r = Math.max(W / img.naturalWidth, (ph1 - ph0) / img.naturalHeight);
+    const P = getPos();
+    const r = Math.max(W / img.naturalWidth, (ph1 - ph0) / img.naturalHeight) * P.z;
     const iw = img.naturalWidth * r, ih = img.naturalHeight * r;
+    DP.geo = { w: W, h: ph1 - ph0, iw, ih };
     g.save(); g.beginPath(); g.rect(0, ph0, W, ph1 - ph0); g.clip();
-    g.drawImage(img, (W - iw) / 2, ph0 + (ph1 - ph0 - ih) * 0.35, iw, ih);
+    g.drawImage(img, (W - iw) * P.x, ph0 + (ph1 - ph0 - ih) * P.y, iw, ih);
     const gr = g.createLinearGradient(0, ph1 - 220, 0, ph1); gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(1, 'rgba(0,0,0,.55)');
     g.fillStyle = gr; g.fillRect(0, ph1 - 220, W, 220); g.restore();
   } else {
@@ -751,6 +778,8 @@ document.addEventListener('click', async (e) => {
   if (t.closest('#lb-dip')) { const f = S.lb.list[S.lb.i]; $('#lb').close(); openDiploma(S.cur, f.id); return; }
   if (t.closest('#dp-close')) { $('#dp').close(); return; }
   const fm = t.closest('[data-f]'); if (fm) { DP.fmt = fm.dataset.f; document.querySelectorAll('[data-f]').forEach((x) => x.setAttribute('aria-pressed', String(x === fm))); drawDiploma(); return; }
+  const mv = t.closest('[data-mv]'); if (mv) { const [a, c] = mv.dataset.mv.split(',').map(Number); movePhoto(a * 40, c * 40); return; }
+  if (t.closest('#dp-reset')) { delete DP.pos[posKey()]; syncAdj(); redrawSoon(); return; }
   const ph = t.closest('[data-ph]'); if (ph) { DP.photo = ph.dataset.ph || null; document.querySelectorAll('[data-ph]').forEach((x) => x.setAttribute('aria-pressed', String(x === ph))); drawDiploma(); return; }
   if (t.closest('#dp-save')) { saveDiploma(); return; }
   if (t.closest('#dp-share')) { shareDiploma(); return; }
@@ -765,6 +794,19 @@ let tx = null;
 $('#lb').addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
 $('#lb').addEventListener('touchend', (e) => { if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) stepLb(dx < 0 ? 1 : -1); tx = null; });
 window.addEventListener('popstate', () => { const qp = new URLSearchParams(location.search); const c = String(qp.get('c') || '').toUpperCase(); if (c && S.bib[c]) showRunner(S.bib[c], false); });
+
+// posun fotky na diplomu
+(() => {
+  const dg = $('#dp-drag'); let last = null;
+  dg.addEventListener('pointerdown', (e) => { last = [e.clientX, e.clientY]; dg.setPointerCapture(e.pointerId); dg.classList.add('on'); e.preventDefault(); });
+  dg.addEventListener('pointermove', (e) => {
+    if (!last) return; const k = $('#dp-cv').width / $('#dp-cv').getBoundingClientRect().width;
+    movePhoto((e.clientX - last[0]) * k, (e.clientY - last[1]) * k); last = [e.clientX, e.clientY];
+  });
+  const end = () => { last = null; dg.classList.remove('on'); };
+  dg.addEventListener('pointerup', end); dg.addEventListener('pointercancel', end);
+  $('#dp-zoom').addEventListener('input', (e) => { getPos().z = Number(e.target.value); redrawSoon(); });
+})();
 
 start();
 })();
