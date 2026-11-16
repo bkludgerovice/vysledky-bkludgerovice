@@ -387,9 +387,11 @@ dialog::backdrop{background:rgba(10,8,8,.92)}
         <div class="dp-photos" id="dp-photos"></div>
         <p class="muted small" id="dp-photo-note"></p>
         <div class="actions" style="margin-top:18px">
-          <button class="btn" id="dp-save"><span id="dp-save-l">Stáhnout / sdílet</span></button>
+          <button class="btn" id="dp-save">Stáhnout obrázek</button>
+          <button class="btn ghost" id="dp-share" hidden>Sdílet (Instagram, Facebook…)</button>
         </div>
         <p class="muted small" id="dp-msg"></p>
+        <p class="muted small" id="dp-tip"></p>
       </div>
     </div>
   </div>
@@ -600,6 +602,8 @@ function openDiploma(b, photoId) {
   $('#dp-photos').innerHTML = opts.map((id) => '<button data-ph="' + esc(id) + '" aria-pressed="' + (id === DP.photo) + '" aria-label="Vybrat fotku"><img src="' + IMG.thumb(id, 200) + '" alt="" loading="lazy"></button>').join('') +
     '<button data-ph="" aria-pressed="' + (!DP.photo) + '" aria-label="Bez fotky" style="font-weight:700;color:var(--muted)">bez<br>fotky</button>';
   $('#dp-photo-note').textContent = own.length ? '' : (S.k.obecna ? 'Tvou fotku podle čísla jsme nenašli, na diplomu je fotka ze závodu.' : 'Tvou fotku podle čísla jsme nenašli.');
+  $('#dp-share').hidden = !umiSdilet();
+  $('#dp-tip').textContent = umiSdilet() ? '' : 'Tip: na telefonu můžeš diplom sdílet rovnou do Instagramu nebo Facebooku.';
   const d = $('#dp'); if (!d.open) d.showModal();
   drawDiploma();
 }
@@ -702,14 +706,25 @@ async function drawDiploma() {
   if (seq === drawSeq && (!DP.photo || img)) $('#dp-msg').textContent = '';
 }
 
-async function saveDiploma() {
+// Sdílení obrázku do aplikací (Instagram, Facebook, WhatsApp…) umí jen telefony; na počítači jen stažení.
+const MOBIL = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+const umiSdilet = () => { try { return MOBIL && !!navigator.canShare && navigator.canShare({ files: [new File([''], 'x.png', { type: 'image/png' })] }); } catch (e) { return false; } };
+async function diplomSoubor() {
   const cv = $('#dp-cv'), b = DP.b;
   const blob = await new Promise((ok) => cv.toBlob(ok, 'image/png'));
   const name = 'diplom-' + slug(b.j) + '-' + slug(S.code) + (DP.fmt === 'story' ? '-pribeh' : '') + '.png';
-  const file = new File([blob], name, { type: 'image/png' });
-  if (navigator.canShare && navigator.canShare({ files: [file] })) { try { await navigator.share({ files: [file], title: 'Můj diplom – ' + ((S.k.zavod || {}).nazev || '') }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
+  return { blob, name, file: new File([blob], name, { type: 'image/png' }) };
+}
+async function shareDiploma() {
+  const { file } = await diplomSoubor();
+  try { await navigator.share({ files: [file], title: 'Můj diplom – ' + ((S.k.zavod || {}).nazev || '') }); }
+  catch (e) { if (!e || e.name !== 'AbortError') saveDiploma(); }
+}
+async function saveDiploma() {
+  const { blob, name } = await diplomSoubor();
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click();
-  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000); toast('Diplom je stažený, přidej ho do příspěvku nebo příběhu.');
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+  toast(MOBIL ? 'Diplom je uložený, najdeš ho ve stažených souborech nebo v galerii.' : 'Diplom je stažený. Na Facebook nebo Instagram ho přidáš jako fotku k příspěvku nebo do příběhu.');
 }
 
 // ---------- události ----------
@@ -736,6 +751,7 @@ document.addEventListener('click', async (e) => {
   const fm = t.closest('[data-f]'); if (fm) { DP.fmt = fm.dataset.f; document.querySelectorAll('[data-f]').forEach((x) => x.setAttribute('aria-pressed', String(x === fm))); drawDiploma(); return; }
   const ph = t.closest('[data-ph]'); if (ph) { DP.photo = ph.dataset.ph || null; document.querySelectorAll('[data-ph]').forEach((x) => x.setAttribute('aria-pressed', String(x === ph))); drawDiploma(); return; }
   if (t.closest('#dp-save')) { saveDiploma(); return; }
+  if (t.closest('#dp-share')) { shareDiploma(); return; }
   if (t === $('#lb') || t.classList.contains('lb-img')) $('#lb').close();
 });
 document.addEventListener('keydown', (e) => {
