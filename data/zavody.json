@@ -69,6 +69,12 @@
       "kod": "L kros",
       "nazev": "Ludgeřovický kros",
       "datum": "2026-11-14"
-    }
-  ]
-}
+       }
+     ],
+     "fotky": {
+       "L kros (2026)": {
+         "katalog": "https://script.google.com/macros/s/AKfycbxCq4PeSK8lELdczw6zGvzzdqYwSbPGeVM47B2rkv0iSBK98g648oBxCXFMVCv28rfOOQ/exec",
+         "medaile": "medaile-lkros-2026.png"
+       }
+     }
+   }
