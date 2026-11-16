@@ -350,6 +350,7 @@ dialog::backdrop{background:rgba(10,8,8,.92)}
         </div>
       </div>
       <div class="chips" id="gal-chips" style="margin-top:12px"></div>
+      <p class="small" id="gal-links" hidden></p>
       <div class="grid" id="gal-grid"></div>
       <div class="more" style="text-align:center"><button class="btn ghost" id="gal-more" hidden>Načíst další fotky</button></div>
     </section>
@@ -424,7 +425,7 @@ async function start() {
     const r = await fetch('data/zavody.json', { cache: 'no-cache' });
     const cfg = r.ok ? await r.json() : {};
     const f = cfg.fotky || {};
-    S.races = Object.keys(f).map((code) => ({ code, url: typeof f[code] === 'string' ? f[code] : (f[code] || {}).katalog, medaile: typeof f[code] === 'string' ? '' : (f[code] || {}).medaile || '' }))
+    S.races = Object.keys(f).map((code) => ({ code, url: typeof f[code] === 'string' ? f[code] : (f[code] || {}).katalog, medaile: typeof f[code] === 'string' ? '' : (f[code] || {}).medaile || '', galerie: typeof f[code] === 'string' ? {} : (f[code] || {}).galerie || {} }))
       .filter((x) => x.url && /^https:\/\//.test(x.url));
     if (!S.races.length) throw new Error('Fotky zatím nejsou zveřejněné.');
     const yr = (c) => Number((c.match(/\((\d{4})\)/) || [])[1] || 0);
@@ -459,7 +460,7 @@ async function loadRace(race) {
   if (!r.ok) throw new Error('Katalog fotek se nepodařilo načíst (' + r.status + ').');
   const k = await r.json();
   if (k.chyba) throw new Error('Katalog fotek hlásí chybu: ' + k.chyba);
-  S.code = race.code; S.url = race.url; S.medaile = race.medaile; S.k = k; S.bib = {}; S.byName = {}; S.byBib = {}; S.tot = {}; S.cur = null;
+  S.code = race.code; S.url = race.url; S.medaile = race.medaile; S.galerie = race.galerie || {}; S.k = k; S.bib = {}; S.byName = {}; S.byBib = {}; S.tot = {}; S.cur = null;
   for (const b of k.bezci || []) {
     b.c = String(b.c); if (!b.n) b.n = Number(b.c.replace(/^D/, ''));
     S.bib[b.c] = b;
@@ -545,7 +546,17 @@ function drawGalleryChips() {
   $('#gal-chips').innerHTML = '<button class="chip" data-gf="-1" aria-pressed="' + (S.gal.f === -1) + '">Všichni<small>' + (k.fotky || []).length + '</small></button>' +
     (k.fotografove || []).map((n, i) => '<button class="chip" data-gf="' + i + '" aria-pressed="' + (S.gal.f === i) + '">' + esc(n) + '<small>' + (cnt[i] || 0) + '</small></button>').join('');
 }
+// odkazy na vlastní galerie fotografů (Zonerama, Google Fotky…) z data/zavody.json → "galerie": {"Jméno": "https://…"}
+function drawGalleryLinks() {
+  const g = S.galerie || {}, fot = S.k.fotografove || [];
+  const ok = (u) => /^https:\/\//.test(u || '');
+  let h = '';
+  if (S.gal.f >= 0) { const n = fot[S.gal.f]; if (ok(g[n])) h = '<a href="' + esc(g[n]) + '" target="_blank" rel="noopener">Celá galerie – ' + esc(n) + ' ↗</a>'; }
+  else { const L = Object.keys(g).filter((n) => ok(g[n])); if (L.length) h = 'Galerie fotografů: ' + L.map((n) => '<a href="' + esc(g[n]) + '" target="_blank" rel="noopener">' + esc(n) + ' ↗</a>').join(' · '); }
+  $('#gal-links').innerHTML = h; $('#gal-links').hidden = !h;
+}
 function resetGallery() {
+  drawGalleryLinks();
   S.gal.list = (S.k.fotky || []).filter((f) => S.gal.f < 0 || f.f === S.gal.f);
   S.gal.n = 0; $('#gal-grid').innerHTML = ''; moreGallery();
   $('#gal-info').textContent = 'Seřazeno podle fotografa a pořadí snímků. Klikni na fotku pro zvětšení a stažení.';
@@ -651,8 +662,6 @@ async function drawDiploma() {
     g.drawImage(img, (W - iw) / 2, ph0 + (ph1 - ph0 - ih) * 0.35, iw, ih);
     const gr = g.createLinearGradient(0, ph1 - 220, 0, ph1); gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(1, 'rgba(0,0,0,.55)');
     g.fillStyle = gr; g.fillRect(0, ph1 - 220, W, 220); g.restore();
-    const f = (S.k.fotky || []).find((x) => x.id === DP.photo); const fot = f ? (S.k.fotografove || [])[f.f] : '';
-    if (fot) { g.fillStyle = 'rgba(255,255,255,.9)'; g.font = '500 26px ' + BD; g.fillText('Foto: ' + fot, 50, ph1 - 28); }
   } else {
     g.fillStyle = INK; g.fillRect(0, ph0, W, ph1 - ph0);
     g.strokeStyle = 'rgba(255,255,255,.07)'; g.lineWidth = 26;
