@@ -484,6 +484,13 @@ async function loadRace(race) {
     if (num(b.p)) S.tot[b.t] = (S.tot[b.t] || 0) + 1;
     if (num(b.pk)) S.tot[b.t + '|' + b.k] = (S.tot[b.t + '|' + b.k] || 0) + 1;
   }
+  // stejné pořadí v kategorii u víc lidí téže trati a pohlaví = časomíra počítá v podkategoriích (např. věk),
+  // které v exportu nejsou → u takové kategorie neukazovat „z N“ ani písmeno kategorie
+  S.sub = {}; const vid = {};
+  for (const b of k.bezci || []) {
+    const key = b.t + '|' + b.k, pk = num(b.pk); if (!pk) continue;
+    if ((vid[key] = vid[key] || {})[pk]) S.sub[key] = true; else vid[key][pk] = true;
+  }
   for (const f of k.fotky || []) { if (f.c) f.c = f.c.map(String); }
   for (const f of k.fotky || []) for (const c of f.c || []) (S.byBib[c] = S.byBib[c] || []).push(f);
   const z = k.zavod || {};
@@ -526,7 +533,8 @@ function placeLines(b) {
   if (b.s && /dns|dnf|dsq/i.test(b.s)) return out;
   const p = num(b.p), pk = num(b.pk);
   if (p) out.push([p + '.', 'místo celkově' + (S.tot[b.t] ? ' z ' + S.tot[b.t] : '')]);
-  if (pk && b.k) out.push([pk + '.', 'v kategorii ' + b.k + (S.tot[b.t + '|' + b.k] ? ' z ' + S.tot[b.t + '|' + b.k] : '')]);
+  if (pk && b.k && S.sub[b.t + '|' + b.k]) out.push([pk + '.', 've své kategorii']);
+  else if (pk && b.k) out.push([pk + '.', 'v kategorii ' + b.k + (S.tot[b.t + '|' + b.k] ? ' z ' + S.tot[b.t + '|' + b.k] : '')]);
   return out;
 }
 const canDiploma = (b) => !(b.s && /dns|dnf|dsq/i.test(b.s));
