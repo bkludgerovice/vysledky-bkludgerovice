@@ -317,6 +317,14 @@ function resolveRunner(fix, name, yob) {
   return { key: k, name: n, yob: y };
 }
 const resolveClub = (fix, s) => { const m = (fix && fix.oddily) || {}; const k = clubKey(s); return k && m[k] ? m[k] : s; };
+/* Klub nastavený u konkrétního běžce (Kontrola dat → Kluby běžců) má přednost; „od“ = rok, od kterého platí */
+const runnerClub = (fix, key, rok, club) => {
+  const l = fix && fix.klubyBezcu && fix.klubyBezcu[key]; if (!l || !l.length) return club;
+  let best = null;
+  for (const p of l) { const od = Number(p.od) || 0; if ((!rok || od <= rok) && (!best || od >= (Number(best.od) || 0))) best = p; }
+  return best ? best.oddil : club;
+};
+const fixAmPm = (v) => { const m = String(v == null ? '' : v).trim().match(/^(\d{1,2}):(\d{2}):(\d{2})\s*([AaPp])\.?\s*[Mm]\.?$/); return m ? ((Number(m[1]) % 12) + (/p/i.test(m[4]) ? 12 : 0)) + ':' + m[2] + ':' + m[3] : v; };
 function parseCSV(text) {
   text = text.replace(/^\uFEFF/, '');
   const nl = text.indexOf('\n'), first = nl < 0 ? text : text.slice(0, nl);
@@ -354,7 +362,7 @@ const ICON_IG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="current
 
 /* ---------- čtení dat ---------- */
 function parseTime(s) {
-  s = String(s || '').trim(); if (!s) return null;
+  s = String(fixAmPm(s) || '').trim(); if (!s) return null;
   const parts = s.replace(',', '.').split(':'); let t = 0;
   for (const p of parts) { const v = Number(p); if (!isFinite(v) || p === '') return null; t = t * 60 + v; }
   return t > 0 ? t : null;
@@ -409,7 +417,7 @@ function build(csvText, cfg, fix) {
     const timeRaw = g(C.time), t = parseTime(timeRaw);
     const placeRaw = g(C.place), pn = parseInt(placeRaw, 10);
     const sexRaw = norm(g(C.sex)), sex = sexRaw.startsWith('z') || sexRaw.startsWith('f') ? 'Ž' : (sexRaw.startsWith('m') ? 'M' : '');
-    const oddil = resolveClub(FIX, g(C.club));
+    const oddil = runnerClub(FIX, who.key, rok, resolveClub(FIX, g(C.club)));
     const key = who.key;
     let runner = RUNNERS[key];
     if (!runner) { runner = RUNNERS[key] = { key, name: who.name, yob, sex, results: [] }; }
