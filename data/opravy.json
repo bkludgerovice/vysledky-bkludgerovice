@@ -1,7 +1,7 @@
 {
  "verze": 1,
  "popis": "Opravy z karty Kontrola dat (BK Ludgeřovice). Klíče: jméno|ročník bez diakritiky, oddíl bez diakritiky.",
- "upraveno": "2026-11-15T18:32:37.534Z",
+ "upraveno": "2026-11-19T06:27:40.627Z",
  "bezci": {
   "adamec matous|": {
    "jmeno": "Adamec Matouš",
@@ -1172,5 +1172,18 @@
   "sobek jakub|2003||sobek jakub|2004"
  ],
  "oddilyNe": [],
- "klubyBezcu": {}
+ "klubyBezcu": {
+  "sobierajska renata|1974": [
+   {
+    "od": null,
+    "oddil": "Eko-Okna Runners"
+   }
+  ],
+  "sobierajski przemek|1973": [
+   {
+    "od": null,
+    "oddil": "Racibórz"
+   }
+  ]
+ }
 }
